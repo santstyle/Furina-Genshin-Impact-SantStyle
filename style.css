@@ -1,0 +1,303 @@
+*,
+html{
+margin: 0; 
+padding: 0;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Letakkan di belakang elemen lain */
+}
+
+/* START NAVIGATION */
+.nav-item:hover {
+    background-color: #b575ff;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    transition-delay: 0.3s;
+    border-radius: 20px;
+    -webkit-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* END NAVIGATION */
+
+/* CONTENT 2 */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #a3d5f7, #e1f0ff); /* Biru muda lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    color: #001f3f;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    color: #002c6b;
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: #b3daff;
+    color: #002c6b;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8fcffd;
+    color: #002c6b;
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+
+.badge {
+    font-size: 1rem; /* Ukuran font */
+    padding: 0.75rem 1rem; /* Padding */
+    background-color: #ffc107; /* Warna kuning emas */
+    color: #002c6b; /* Warna teks */
+    border: 2px solid #fff; /* Border putih untuk lebih menonjol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+    transform: translate(-60%, -40%); /* Memastikan badge lebih masuk ke dalam card */
+    overflow: visible; /* Memastikan badge tidak terpotong */
+}
+
+.badge:hover {
+    background-color: #ffd54f;
+}
+/* CONTENT 2 END */
+
+/* START CAROUSEL IMAGE */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel-item {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.7s ease-in-out; /* Smooth fade-in fade-out */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Default, below active item */
+    pointer-events: none; /* Prevent interaction when not visible */
+}
+
+.carousel-item.active {
+    opacity: 1; /* Fully visible when active */
+    z-index: 1; /* Make sure it's on top */
+    position: relative;
+    pointer-events: auto; /* Allow interaction only for active slides */
+}
+
+/* Ensure the next and previous images are ready for a smooth transition */
+.carousel-item-next,
+.carousel-item-prev {
+    opacity: 1; /* They stay fully visible during transitions */
+    z-index: 0; /* Keep them behind the active one */
+    pointer-events: none; /* Prevent interaction with them */
+}
+
+/* Image styles */
+.carousel-item img {
+    border-radius: 15px;
+    height: auto; /* Allow height to auto adjust */
+    max-height: 100%; /* Limit height to fit within carousel */
+    width: auto;
+    max-width: 100%;
+}
+
+/* Styling for the carousel captions */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+/* Controls styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    .carousel-caption {
+        bottom: 10px;
+        left: 10px;
+        max-width: 90%;
+        font-size: 14px;
+    }
+}
+
+/* END CAROUSEL IMAGE */
+
+/* START TOMBOL POP UP */
+#openPopup {
+    background: linear-gradient(45deg, #caecff, #005eff); /* Gradient background */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition effect */
+}
+
+/* EFEK HOVER UNTUK TOMBOL */
+#openPopup:hover {
+    background: linear-gradient(45deg, #005eff, #caecff); /* Hover gradient */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* TOMBOL SAAT DI KILIK */
+#openPopup:active {
+    transform: translateY(1px); /* Slight drop when clicked */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+/* POP UP MODAL (SEMBUNYIKAN AWALNYA) */
+.popup {
+    display: none; /* Hide the popup initially */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692); /* Darker transparent background */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start with opacity 0 */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    z-index: 100; /* Ensure the popup is on top */
+}
+
+/* KONTEN POPUP */
+.popup-content {
+    padding: 40px; /* Increased padding for spacious feel */
+    border-radius: 15px; /* Rounded corners */
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+    text-align: center; /* Center content */
+    background: none; /* White background for content */
+    position: relative; /* Ensure it positions correctly */
+}
+
+/* KETIKA POP UP AKTIF */
+.popup.active {
+    display: flex; /* Show popup */
+    opacity: 1; /* Fully visible */
+}
+
+/* TOMBOL CLOSE X */
+.close {
+    position: absolute;
+    top: 15px; /* Adjusted position */
+    right: 20px;
+    font-size: 28px; /* Increased font size for better visibility */
+    color: #333; /* Color for close button */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Color transition on hover */
+}
+
+/* CLOSE BUTTON HOVER EFFECT */
+.close:hover {
+    color: #959cff; /* Change color on hover */
+}
+
+/* ANIMASI CLOSE */
+.popup.active .popup-content {
+    opacity: 1; /* Fully visible when active */
+}
+
+/* FADE OUT EFFECT */
+.popup-content.fade-out {
+    opacity: 0; /* Fade out effect */
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%; /* Full width on smaller screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    /* Adjust close button size on small screens */
+    .close {
+        font-size: 24px; /* Adjust close button size */
+    }
+}
+
+/* ADDED STYLES FOR TEXT INSIDE POPUP */
+.popup-content h2 {
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 24px; /* Heading font size */
+    color: #333; /* Heading color */
+}
+
+.popup-content p {
+    margin-bottom: 20px; /* Space below paragraph */
+    color: #666; /* Paragraph text color */
+    font-size: 16px; /* Paragraph font size */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* END TOMBOL POP */
