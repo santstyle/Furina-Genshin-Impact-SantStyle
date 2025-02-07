@@ -1,0 +1,142 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #e0f4ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+  /* ===== NAVBAR STYLES ===== */
+.navbar {
+    background: rgba(26, 26, 46, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #00d2ff;
+}
+
+.navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #00d2ff !important;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+.nav-link {
+    color: #e0f4ff !important;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00d2ff !important;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+.dropdown-menu {
+    background: rgba(26, 26, 46, 0.9);
+    border: 1px solid #00d2ff;
+}
+
+.dropdown-item {
+    color: #e0f4ff;
+}
+
+.dropdown-item:hover {
+    background: #00d2ff;
+    color: #1a1a2e;
+}
+
+.btn-outline-light {
+    border-color: #00d2ff;
+    color: #00d2ff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: #00d2ff;
+    color: #1a1a2e;
+    box-shadow: 0 0 10px #00d2ff;
+}
+
+  /* ===== CARD STYLES ===== */
+.card {
+    background: rgba(26, 26, 46, 0.7);
+    border: 1px solid #00d2ff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #00d2ff;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+.card-text {
+    color: #e0f4ff;
+}
+
+.text-muted {
+    color: #a8a8a8 !important;
+}
+
+  /* ===== PARAGRAPH STYLES ===== */
+paragraf {
+    background: rgba(26, 26, 46, 0.7);
+    border: 1px solid #00d2ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    backdrop-filter: blur(5px);
+}
+
+.paragraf h1 {
+    color: #00d2ff;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+.paragraf p {
+    color: #e0f4ff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+  /* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .navbar-brand {
+    font-size: 1.2rem;
+    }
+
+    .nav-link { font-size: 1rem;
+    }
+
+    .card {
+    margin-bottom: 20px;
+    }
+
+    .paragraf {
+    padding: 15px;
+    }
+
+    .paragraf h1 {
+    font-size: 1.5rem;
+    }
+
+    .paragraf p {
+    font-size: 1rem;
+    }
+}
+
