@@ -10,48 +10,47 @@
 </head>
 <body class="bg-light">
 <!-- Video Background -->
-  <video id="background-video" autoplay loop muted playsinline>
-    <source src="/ASSET/blue-sky-and-windmills.3840x2160.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+<video id="background-video" autoplay loop muted playsinline>
+  <source src="asset/" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
+
   <div class="container-fluid text-light" style="height:150vh; padding: 0; margin: 0;">
-<!-- NAVIGATION START -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-light sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">GENSHIN IMPACT</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-    aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/about/">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Others
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/lore/">Lore</a></li>
-            <li><a class="dropdown-item" href="/gallery/">Gallery</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/owner/">Owner</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<!-- NAVIGATION END -->
+    <!-- NAVIGATION START -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-light sticky-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">GENSHIN IMPACT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="about">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Others
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="lore">Lore</a></li>
+                          <li><a class="dropdown-item" href="gallery">Gallery</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+  <!-- NAVIGATION END -->
 
   <!-- CAROUSEL IMAGE -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -120,8 +119,23 @@
 </div>
 <!-- CONTENT 1 END -->
 
-<<!-- CONTENT 2 -->
+<!-- CONTENT 2 -->
 <div class="row text-dark mt-2">
+  <!-- Card Gallery -->
+  <div class="col-sm-4 g-2">
+    <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff); position: relative; overflow: visible;">
+      <div class="card-body">
+        <h5 class="card-title text-center text-uppercase fw-bold mb-4" style="color: #001f3f; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">Gallery</h5>
+        <p class="card-text text-center" style="color: #002c6b;">Beberapa foto Furina yang tentu saja cantik, lucu, dan gemesin.</p>
+        <a href="/gallery/" class="btn btn-primary d-block fw-bold shadow-sm" style="border-radius: 30px; background-color: #b3daff; color: #002c6b;">Liat</a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm" style="transform: translate(-60%, -40%); padding: 0.75rem 1rem; font-size: 1rem; border: 2px solid #fff;">
+          maintenance
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card About -->
   <div class="col-sm-4 g-2">
     <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff);">
       <div class="card-body">
@@ -132,20 +146,7 @@
     </div>
   </div>
 
-  <div class="col-sm-4 g-2">
-    <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff); position: relative; overflow: visible;">
-      <div class="card-body">
-        <h5 class="card-title text-center text-uppercase fw-bold mb-4" style="color: #001f3f; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">Gallery</h5>
-        <p class="card-text text-center" style="color: #002c6b;">Beberapa foto Furina yang tentu saja cantik, lucu, dan gemesin.</p>
-        <a href="/gallery/" class="btn btn-primary d-block fw-bold shadow-sm" style="border-radius: 30px; background-color: #b3daff; color: #002c6b;">Liat</a>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm" style="transform: translate(-60%, -40%); padding: 0.75rem 1rem; font-size: 1rem; border: 2px solid #fff;">
-          99+
-        </span>
-      </div>
-    </div>
-  </div>
-  
-
+  <!-- Card Lore -->
   <div class="col-sm-4 g-2">
     <div class="card shadow-lg border-0" style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff);">
       <div class="card-body">
@@ -158,10 +159,7 @@
 </div>
 <!-- CONTENT 2 END -->
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-</html>

@@ -11,50 +11,35 @@ padding: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Letakkan di belakang elemen lain */
+    z-index: -1;
 }
 
-/* START NAVIGATION */
-.nav-item:hover {
-    background-color: #b575ff;
-    color: rgb(255, 255, 255);
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    transition-delay: 0.3s;
-    border-radius: 20px;
-    -webkit-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+body {
+    background: linear-gradient(135deg, #6db1ff, #9dc6ff);
 }
-
 /* END NAVIGATION */
 
 /* CONTENT 2 */
 .card {
     border-radius: 20px;
     overflow: hidden;
-    background: linear-gradient(135deg, #a3d5f7, #e1f0ff); /* Biru muda lembut */
+    background: linear-gradient(135deg, #a3d5f7, #e1f0ff);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.card-title {
-    font-family: 'Roboto', sans-serif;
-    color: #001f3f;
-    letter-spacing: 1.5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+/* Efek hover pada gambar di dalam card */
+.card img {
+    transition: transform 0.3s ease;
 }
 
-.card-text {
-    color: #002c6b;
-    font-size: 1rem;
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .btn {
@@ -187,7 +172,7 @@ padding: 0;
 
 /* START TOMBOL POP UP */
 #openPopup {
-    background: linear-gradient(45deg, #caecff, #005eff); /* Gradient background */
+    background: linear-gradient(45deg, #caecff, #005eff);
     border: none;
     color: white;
     padding: 15px 30px;
@@ -195,25 +180,22 @@ padding: 0;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease; /* Transition effect */
+    transition: all 0.3s ease;
 }
 
-/* EFEK HOVER UNTUK TOMBOL */
 #openPopup:hover {
-    background: linear-gradient(45deg, #005eff, #caecff); /* Hover gradient */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
-    transform: translateY(-3px); /* Slight lift on hover */
+    background: linear-gradient(45deg, #005eff, #caecff);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
-/* TOMBOL SAAT DI KILIK */
 #openPopup:active {
-    transform: translateY(1px); /* Slight drop when clicked */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 /* POP UP MODAL (SEMBUNYIKAN AWALNYA) */
 .popup {
     display: none; /* Hide the popup initially */
@@ -301,3 +283,15 @@ padding: 0;
 }
 
 /* END TOMBOL POP */
+
+/* CARD*/
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+}
+/* END CARD*/
