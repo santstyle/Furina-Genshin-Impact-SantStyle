@@ -1,0 +1,4 @@
+.nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #00aaff;
+}
