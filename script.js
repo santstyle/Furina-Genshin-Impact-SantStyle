@@ -9,25 +9,25 @@ if (popup && openPopup && closePopup) {
     openPopupButton.addEventListener('click', function() {
         popup.style.display = 'block';
         setTimeout(() => {
-            popup.style.opacity = 1; // Fade-in effect
+            popup.style.opacity = 1; 
         }, 10);
     });
 
     // CLOSE CLICK POP UP
     closePopupButton.addEventListener('click', function() {
-    popup.style.opacity = 0; // Fade-out effect
+    popup.style.opacity = 0; 
     setTimeout(() => {
-        popup.style.display = 'none'; // Hide after fade out
-    }, 500); // Match the timeout with the CSS transition
+        popup.style.display = 'none'; 
+    }, 500); 
     });
 
     // TUTUP POP UP JIKA KLIK DI LUAR KONTEN POP UP
     window.addEventListener('click', function(event) {
         if (event.target === popup) {
-            popup.style.opacity = 0; // Fade-out effect
+            popup.style.opacity = 0; 
             setTimeout(() => {
-                popup.style.display = 'none'; // Hide after fade out
-            }, 500); // Durasi sama seperti di atas
+                popup.style.display = 'none'; 
+            }, 500);
         }
     });
 } else {

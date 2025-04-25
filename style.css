@@ -4,18 +4,13 @@ margin: 0;
 padding: 0;
 }
 
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
 body {
     background: linear-gradient(135deg, #6db1ff, #9dc6ff);
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #00aaff;
 }
 /* END NAVIGATION */
 
@@ -33,7 +28,6 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Efek hover pada gambar di dalam card */
 .card img {
     transition: transform 0.3s ease;
 }
@@ -42,15 +36,14 @@ body {
     transform: scale(1.1);
 }
 
-.btn {
-    background-color: #b3daff;
-    color: #002c6b;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .btn:hover {
@@ -64,14 +57,14 @@ body {
 }
 
 .badge {
-    font-size: 1rem; /* Ukuran font */
-    padding: 0.75rem 1rem; /* Padding */
-    background-color: #ffc107; /* Warna kuning emas */
-    color: #002c6b; /* Warna teks */
-    border: 2px solid #fff; /* Border putih untuk lebih menonjol */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
-    transform: translate(-60%, -40%); /* Memastikan badge lebih masuk ke dalam card */
-    overflow: visible; /* Memastikan badge tidak terpotong */
+    font-size: 1rem; 
+    padding: 0.75rem 1rem; 
+    background-color: #ffc107; 
+    color: #002c6b; 
+    border: 2px solid #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: translate(-60%, -40%); 
+    overflow: visible; 
 }
 
 .badge:hover {
@@ -93,42 +86,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.7s ease-in-out; /* Smooth fade-in fade-out */
+    opacity: 0; 
+    transition: opacity 0.7s ease-in-out; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0; /* Default, below active item */
-    pointer-events: none; /* Prevent interaction when not visible */
+    z-index: 0; 
+    pointer-events: none; 
 }
 
 .carousel-item.active {
-    opacity: 1; /* Fully visible when active */
-    z-index: 1; /* Make sure it's on top */
+    opacity: 1; 
+    z-index: 1;
     position: relative;
-    pointer-events: auto; /* Allow interaction only for active slides */
+    pointer-events: auto; 
 }
 
-/* Ensure the next and previous images are ready for a smooth transition */
+
 .carousel-item-next,
 .carousel-item-prev {
-    opacity: 1; /* They stay fully visible during transitions */
-    z-index: 0; /* Keep them behind the active one */
-    pointer-events: none; /* Prevent interaction with them */
+    opacity: 1;
+    z-index: 0; 
+    pointer-events: none; 
 }
 
-/* Image styles */
+/* IMAGE STYLE */
 .carousel-item img {
     border-radius: 15px;
-    height: auto; /* Allow height to auto adjust */
-    max-height: 100%; /* Limit height to fit within carousel */
+    height: auto; 
+    max-height: 100%; 
     width: auto;
     max-width: 100%;
 }
 
-/* Styling for the carousel captions */
+
 .carousel-caption {
     position: absolute;
     bottom: 20px;
@@ -139,7 +132,7 @@ body {
     max-width: 80%;
 }
 
-/* Controls styling */
+/* STYLE CONTROL */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     border-radius: 50%;
@@ -148,7 +141,7 @@ body {
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .carousel-control-prev,
@@ -198,88 +191,87 @@ body {
 }
 /* POP UP MODAL (SEMBUNYIKAN AWALNYA) */
 .popup {
-    display: none; /* Hide the popup initially */
+    display: none;
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.692); /* Darker transparent background */
+    background-color: rgba(0, 0, 0, 0.692);
     justify-content: center;
     align-items: center;
     opacity: 0; /* Start with opacity 0 */
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
-    z-index: 100; /* Ensure the popup is on top */
+    transition: background-color 0.3s ease, opacity 0.3s ease; 
+    z-index: 100; 
 }
 
 /* KONTEN POPUP */
 .popup-content {
-    padding: 40px; /* Increased padding for spacious feel */
-    border-radius: 15px; /* Rounded corners */
-    width: 80%; /* Responsive width */
-    max-width: 600px; /* Maximum width */
-    text-align: center; /* Center content */
-    background: none; /* White background for content */
-    position: relative; /* Ensure it positions correctly */
+    padding: 40px; 
+    border-radius: 15px; 
+    width: 80%; 
+    max-width: 600px; 
+    text-align: center; 
+    background: none; 
+    position: relative;
 }
 
 /* KETIKA POP UP AKTIF */
 .popup.active {
-    display: flex; /* Show popup */
-    opacity: 1; /* Fully visible */
+    display: flex; 
+    opacity: 1; 
 }
 
 /* TOMBOL CLOSE X */
 .close {
     position: absolute;
-    top: 15px; /* Adjusted position */
+    top: 15px;
     right: 20px;
-    font-size: 28px; /* Increased font size for better visibility */
-    color: #333; /* Color for close button */
+    font-size: 28px; 
+    color: #333; 
     cursor: pointer;
-    transition: color 0.3s ease; /* Color transition on hover */
+    transition: color 0.3s ease; 
 }
 
 /* CLOSE BUTTON HOVER EFFECT */
 .close:hover {
-    color: #959cff; /* Change color on hover */
+    color: #959cff; 
 }
 
 /* ANIMASI CLOSE */
 .popup.active .popup-content {
-    opacity: 1; /* Fully visible when active */
+    opacity: 1;
 }
 
 /* FADE OUT EFFECT */
 .popup-content.fade-out {
-    opacity: 0; /* Fade out effect */
+    opacity: 0; 
 }
 
 /* RESPONSIF */
 @media (max-width: 768px) {
     .popup-content {
-        width: 90%; /* Full width on smaller screens */
-        padding: 20px; /* Reduced padding */
+        width: 90%; 
+        padding: 20px; 
     }
 
-    /* Adjust close button size on small screens */
     .close {
-        font-size: 24px; /* Adjust close button size */
+        font-size: 24px; 
     }
 }
 
 /* ADDED STYLES FOR TEXT INSIDE POPUP */
 .popup-content h2 {
-    margin-bottom: 15px; /* Space below heading */
-    font-size: 24px; /* Heading font size */
-    color: #333; /* Heading color */
+    margin-bottom: 15px;
+    font-size: 24px; 
+    color: #333; 
 }
 
 .popup-content p {
-    margin-bottom: 20px; /* Space below paragraph */
-    color: #666; /* Paragraph text color */
-    font-size: 16px; /* Paragraph font size */
-    line-height: 1.5; /* Improved readability */
+    margin-bottom: 20px; 
+    color: #666; 
+    font-size: 16px; 
+    line-height: 1.5; 
 }
 
 /* END TOMBOL POP */
