@@ -5,7 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-  /* ===== NAVBAR STYLES ===== */
+/* ===== NAVBAR STYLES ===== */
 .navbar {
     background: rgba(26, 26, 46, 0.9) !important;
     backdrop-filter: blur(10px);
@@ -26,8 +26,8 @@ body {
 }
 
 .nav-link:hover {
-    color: #00d2ff !important;
-    text-shadow: 0 0 10px #00d2ff;
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #00aaff;
 }
 
 .dropdown-menu {
@@ -56,7 +56,7 @@ body {
     box-shadow: 0 0 10px #00d2ff;
 }
 
-  /* ===== CARD STYLES ===== */
+/* ===== CARD STYLES ===== */
 .card {
     background: rgba(26, 26, 46, 0.7);
     border: 1px solid #00d2ff;
@@ -92,7 +92,7 @@ body {
     color: #a8a8a8 !important;
 }
 
-  /* ===== PARAGRAPH STYLES ===== */
+/* ===== PARAGRAPH STYLES ===== */
 paragraf {
     background: rgba(26, 26, 46, 0.7);
     border: 1px solid #00d2ff;
@@ -114,55 +114,58 @@ paragraf {
     line-height: 1.6;
 }
 
-  /* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .navbar-brand {
-    font-size: 1.2rem;
+        font-size: 1.2rem;
     }
 
-    .nav-link { font-size: 1rem;
+    .nav-link {
+        font-size: 1rem;
     }
 
     .card {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .paragraf {
-    padding: 15px;
+        padding: 15px;
     }
 
     .paragraf h1 {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
 
     .paragraf p {
-    font-size: 1rem;
+        font-size: 1rem;
     }
 }
 
 /* Animasi Fade In */
 @keyframes fadeIn {
     from {
-    opacity: 0;
+        opacity: 0;
     }
+
     to {
-    opacity: 1;
-    }
-}
- 
-  /* Animasi Slide Up */
-@keyframes slideUp {
-    from {
-    transform: translateY(20px);
-    opacity: 0;
-    }
-    to {
-    transform: translateY(0);
-    opacity: 1;
+        opacity: 1;
     }
 }
 
-  /* Class untuk Animasi */
+/* ANIMASI STYLE UP */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* CLASS UNTUK ANIMASI */
 .fade-in {
     animation: fadeIn 1s ease-in-out forwards;
 }
@@ -171,7 +174,6 @@ paragraf {
     animation: slideUp 1s ease-in-out forwards;
 }
 
-  /* Awalnya sembunyikan elemen */
 .hidden {
     opacity: 0;
 }
