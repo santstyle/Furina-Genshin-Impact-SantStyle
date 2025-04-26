@@ -34,7 +34,11 @@ body {
 }
 
 .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }
 
 .background-video {
@@ -60,7 +64,7 @@ body {
 .badge {
     font-size: 1rem; 
     padding: 0.75rem 1rem; 
-    background-color: #ffc107; 
+    background-color: #07a0ff; 
     color: #002c6b; 
     border: 2px solid #fff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -69,7 +73,7 @@ body {
 }
 
 .badge:hover {
-    background-color: #ffd54f;
+    background-color: #4fa4ff;
 }
 /* CONTENT 2 END */
 
@@ -129,8 +133,12 @@ body {
     left: 20px;
     color: white;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     max-width: 80%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
 }
 
 /* STYLE CONTROL */
@@ -138,11 +146,6 @@ body {
 .carousel-control-next-icon {
     border-radius: 50%;
     padding: 15px;
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .carousel-control-prev,
@@ -166,62 +169,38 @@ body {
 
 /* START TOMBOL POP UP */
 #openPopup {
+    position: relative;
+    top:20px;
     background: linear-gradient(45deg, #caecff, #005eff);
     border: none;
     color: white;
     padding: 15px 30px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 30px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.298);
     cursor: pointer;
     transition: all 0.3s ease;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-decoration: none;
 }
 
 #openPopup:hover {
     background: linear-gradient(45deg, #005eff, #caecff);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 25px ;
     transform: translateY(-5px);
 }
 
 #openPopup:active {
     transform: translateY(2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-/* POP UP MODAL (SEMBUNYIKAN AWALNYA) */
-.popup {
-    display: none;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.692);
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Start with opacity 0 */
-    transition: background-color 0.3s ease, opacity 0.3s ease; 
-    z-index: 100; 
+    box-shadow: 0 5px 10px ;
 }
 
-/* KONTEN POPUP */
-.popup-content {
-    padding: 40px; 
-    border-radius: 15px; 
-    width: 80%; 
-    max-width: 600px; 
-    text-align: center; 
-    background: none; 
-    position: relative;
-}
-
-/* KETIKA POP UP AKTIF */
-.popup.active {
-    display: flex; 
-    opacity: 1; 
-}
 
 /* TOMBOL CLOSE X */
 .close {
@@ -239,16 +218,6 @@ body {
     color: #959cff; 
 }
 
-/* ANIMASI CLOSE */
-.popup.active .popup-content {
-    opacity: 1;
-}
-
-/* FADE OUT EFFECT */
-.popup-content.fade-out {
-    opacity: 0; 
-}
-
 /* RESPONSIF */
 @media (max-width: 768px) {
     .popup-content {
@@ -261,30 +230,3 @@ body {
     }
 }
 
-/* ADDED STYLES FOR TEXT INSIDE POPUP */
-.popup-content h2 {
-    margin-bottom: 15px;
-    font-size: 24px; 
-    color: #333; 
-}
-
-.popup-content p {
-    margin-bottom: 20px; 
-    color: #666; 
-    font-size: 16px; 
-    line-height: 1.5; 
-}
-
-/* END TOMBOL POP */
-
-/* CARD*/
-.card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-body {
-    flex: 1;
-}
-/* END CARD*/

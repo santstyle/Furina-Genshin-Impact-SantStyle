@@ -33,4 +33,3 @@ if (popup && openPopup && closePopup) {
 } else {
     console.error('Popup atau elemen terkait tidak ditemukan');
 }
-
