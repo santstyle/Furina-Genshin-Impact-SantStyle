@@ -1,9 +1,126 @@
-html{
-    margin: 0; 
+/* lore.css */
+
+body {
+    margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.fixed-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.content-wrapper {
+    position: relative;
+    background-color: transparent;
+    padding: 20px;
+}
+
+#lore-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.lore-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 400px;
+}
+
+.lore-card:hover {
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.lore-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lore-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.lore-text small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+.fun-fact {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    color: #333;
+}
+
+.fun-fact h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.fun-fact p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animation classes */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #lore-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    
-    .nav-link:hover {
-        color: #ffffff !important;
-        text-shadow: 0 0 10px #00aaff;
+
+    .lore-card {
+        height: 350px;
     }
+}
+
+@media (max-width: 576px) {
+    #lore-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .lore-card {
+        height: 300px;
+    }
+}
