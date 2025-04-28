@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleScrollAnimations() {
         galleryImages.forEach((img, index) => {
             if (isInViewport(img) && !img.classList.contains('fade-in')) {
-                // Staggered animation with delay based on index
                 setTimeout(() => {
                     img.classList.add('fade-in');
                 }, index * 100);

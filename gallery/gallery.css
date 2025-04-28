@@ -6,73 +6,187 @@ body {
     perspective: 1000px;
 }
 
-/* ===== FIXED BACKGROUND STYLES (NON-SCROLLING) ===== */
-.image-background,
-.fixed-background {
-    position: fixed; /* Changed from absolute to fixed */
+/* SIMPLE FIXED BACKGROUND */
+.background-image {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    animation: fadeInBackground 1.5s ease-out forwards;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-    /* Ensures background stays fixed during scroll */
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.image-background img,
-.fixed-background img {
-    position: absolute;
+.background-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.5s ease;
-    /* Prevent any possible scroll */
-    pointer-events: none;
-    /* Fix for mobile browsers */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    /* Backup if image fails to load */
-    background-color: #6db1ff; /* Matching your gradient color */
 }
 
-.fixed-background img {
-    opacity: 0.3;
-    filter: blur(1px);
+/* ===========================
+Navbar Styles
+   =========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .image-background,
-    .fixed-background {
-        /* Mobile browsers handle fixed differently */
-        position: absolute;
-        height: auto;
-        min-height: 100vh;
-        background-attachment: scroll;
-    }
-    
-    /* Alternative mobile fixed background technique */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: inherit;
-    }
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
 }
-/* ===== END FIXED BACKGROUND STYLES (NON-SCROLLING) ===== */
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand i {
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    transform: translateY(-4px) scale(1.1);
+    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.nav-link::after {
+    content: none;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    opacity: 0;
+    transform: none;
+    width: 100%;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler i {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+/* ===========================
+Search Box
+   =========================== */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 200px;
+    padding: 5px 10px;
+}
+
+.search-box input::placeholder {
+    color: white;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===========================
+Buttons
+   =========================== */
+.btn-premium {
+    background: var(--premium);
+    color: var(--dark);
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+    background: #2c83e1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
+}
+
+.btn-watch {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-watch:hover {
+    background: #0097e6;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+}
+
+.btn-trailer,
+.btn-favorite {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-trailer:hover,
+.btn-favorite:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
 
 /* Keyframes for fade-in effect */
 @keyframes fadeInBackground {
@@ -109,13 +223,17 @@ body {
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    opacity: 0;
+    opacity: 100;
     transform: translateY(30px) rotateX(10deg);
     transform-origin: center bottom;
     filter: brightness(0.95);
     will-change: transform, box-shadow, filter;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Staggered Animation for Images */
@@ -128,11 +246,15 @@ body {
 
 /* Hover Effects with Gentle Pulse */
 #gallery img:hover {
-    transform: scale(1.08) translateY(-8px) rotateX(0deg);
+    transform: scale(1.8) translateY(-8px) rotateX(0deg);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
     filter: brightness(1.08);
     z-index: 10;
     animation: gentlePulse 2s infinite ease-in-out;
+    -webkit-transform: scale(1.8) translateY(-8px) rotateX(0deg);
+    -moz-transform: scale(1.8) translateY(-8px) rotateX(0deg);
+    -ms-transform: scale(1.8) translateY(-8px) rotateX(0deg);
+    -o-transform: scale(1.8) translateY(-8px) rotateX(0deg);
 }
 
 @keyframes gentlePulse {
