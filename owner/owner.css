@@ -13,8 +13,14 @@ html{
     z-index: -1;
 }
 /* ===========================
-Navbar Styles
+Dropdown Menu
    =========================== */
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.082) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+}
+/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -53,9 +59,9 @@ Navbar Styles
 }
 
 .nav-link:hover {
-    color: var(--primary) !important;
+    color: white !important;
     transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    text-shadow: 0 0 12px white, 0 0 8px white;
     transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
