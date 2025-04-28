@@ -1,11 +1,33 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Very light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #e6f2ff 0%, #f0f8ff 100%);
+}
 .nav-link:hover {
     color: #ffffff !important;
     text-shadow: 0 0 10px #00aaff;
 }
 /* ===========================
+Dropdown Menu
+   =========================== */
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.082) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+}
+/* ===========================
 Navbar Styles
    =========================== */
-   .navbar {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -164,4 +186,99 @@ Buttons
 .btn-favorite:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
+}
+/* Content Section */
+#furina-character {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+#furina-character h1 {
+    color: #2980b9;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a8d8ea;
+    padding-bottom: 10px;
+}
+
+#furina-character h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+}
+
+#furina-character p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+#furina-character ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#furina-character li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+#furina-character strong {
+    color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #furina-character {
+        padding: 20px;
+        margin: 20px 15px;
+    }
+    
+    #furina-character h1 {
+        font-size: 2rem;
+    }
+    
+    #furina-character h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation Effects */
+.navbar-brand, .nav-link, .btn-premium {
+    transition: all 0.3s ease;
+}
+
+/* Water-themed decorative elements */
+#furina-character::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: linear-gradient(90deg, #a8d8ea, #4a89dc, #a8d8ea);
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+/* Dropdown menu animation */
+.dropdown-menu {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effects for list items */
+#furina-character li {
+    transition: all 0.2s ease;
+    padding-left: 5px;
+}
+
+#furina-character li:hover {
+    background-color: #e6f5ff;
+    border-left: 3px solid #4a89dc;
+    padding-left: 10px;
 }
