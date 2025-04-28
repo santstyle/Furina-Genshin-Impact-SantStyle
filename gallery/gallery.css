@@ -23,7 +23,14 @@ body {
     object-fit: cover;
     object-position: center;
 }
-
+/* ===========================
+Dropdown Menu
+   =========================== */
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.082) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+}
 /* ===========================
 Navbar Styles
    =========================== */
@@ -65,9 +72,9 @@ Navbar Styles
 }
 
 .nav-link:hover {
-    color: var(--primary) !important;
+    color: white !important;
     transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    text-shadow: 0 0 12px white, 0 0 8px white;
     transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -206,14 +213,21 @@ Buttons
     position: relative;
     background-color: transparent;
     padding-top: 0px;
+    margin-top: 0 !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: none !important;
 }
 
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 55px;
+    margin-top: 0px;
 }
 
 #gallery img {
