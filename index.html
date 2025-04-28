@@ -4,197 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Furina - Genshin Impact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Furina - Home Page</title>
-</head>
 
-<body class="bg-light">
-    <video autoplay muted loop class="background-video">
-        <source src="/asset/Furina-FHD.mp4" type="video/mp4">
-    </video>
-    <div class="container-fluid text-light" style="height:150vh; padding: 0; margin: 0;">
-        <!-- NAVIGATION START -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-light sticky-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">GENSHIN IMPACT</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about/">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Others
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/lore/">Lore</a></li>
-                                <li><a class="dropdown-item" href="/gallery/">Gallery</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/owner/">Owner</a></li>
-                            </ul>
-                        </li>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">
+                <i></i>Genshin Impact
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery/index.html"><i class="fas fa-play-circle me-1"></i>
+                            Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/index.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-list me-1"></i> Others
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-light" href="/lore/index.html">Lore</a></li>
+                            <li><a class="dropdown-item text-light" href="/owner/index.html">Owner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search anime...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="https://www.instagram.com/santstyle.mv/?hl=id" class="btn btn-premium ms-3 text-light">Follow</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div id="playback-video">
+                    <video autoplay muted loop src="/asset/furinagenshin.mp4" type="video/mp4"></video>
+                </div>
+                <div class="col-lg-6">
+                    <h1>Furina: The Hydro Archon</h1>
+                    <div class="rating">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star-half-alt"></i></span>
+                        <span>4.7 (12.5k reviews)</span>
+                    </div>
+                    <p class="description">Follow the journey of Furina, the mysterious Hydro Archon of Fontaine, as she
+                        navigates the complex politics of Teyvat while hiding her true nature.</p>
+                    <div class="actions">
+                        <a href="https://youtu.be/aau-c8l5z9c?si=BCCaS97-1S79Iesy" class="btn btn-watch text-bg-primary"><i class="fas fa-play"></i> Watch Now</a>
+                        <a href="#" class="btn btn-trailer"><i class="fas fa-film"></i> Trailer</a>
+                        <a href="#" class="btn btn-favorite"><i class="far fa-bookmark"></i> Add to List</a>
+                    </div>
+                    <div class="meta-info">
+                        <span><i class="fas fa-tag"></i> Action, Adventure, Fantasy</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                        <span><i class="fas fa-flag"></i> Studio MiHoYo</span>
+                    </div>
+                </div>
+                </divv>
+            </div>
+    </section>
+
+    <!-- Featured Episodes -->
+    <section class="episodes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Videos</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="episodes-grid">
+                <!-- Episode cards would go here -->
+                <!-- VIDEO 1-->
+                <div class="episode-card">
+                    <div class="episode-thumbnail" data-url="https://youtu.be/EN79SfbcvIE?si=QoZ4MIbZHgLifx2D">
+                        <img src="/asset/maxresdefault (1).jpg" alt="">
+                        <div class="overlay">
+                            <span class="duration">03.15</span>
+                            <button class="play-btn"><i class="fas fa-play link-primary"></i></button>
+                        </div>
+                    </div>
+                    <div class="episode-info">
+                        <h3>Demo Karakter — "Furina: Dunia Adalah Panggung Sandiwara" | Genshin Impact</h3>
+                        <div class="meta">
+                            <span class="views"><i class="fas fa-eye"></i> 13 Jt</span>
+                            <span class="date">1 years ago</span>
+                        </div>
+                    </div>
+                </div>
+                <!--VIDEO 2-->
+                <div class="episode-card">
+                    <div class="episode-thumbnail" data-url="https://youtu.be/kglEsR7bqAY?si=7oPCvAfpDeoLG_yj">
+                        <img src="/asset/maxresdefault.jpg" alt="">
+                        <div class="overlay">
+                            <span class="duration">02.38</span>
+                            <button class="play-btn"><i class="fas fa-play link-primary"></i></button>
+                        </div>
+                    </div>
+                    <div class="episode-info">
+                        <h3>Teaser Kisah: La vaguelette | Genshin Impact </h3>
+                        <div class="meta">
+                            <span class="views"><i class="fas fa-eye"></i> 5.9 Jt</span>
+                            <span class="date">1 years ago</span>
+                        </div>
+                    </div>
+                </div>
+                <!--VIDEO 3-->
+                <div class="episode-card">
+                    <div class="episode-thumbnail" data-url="https://youtu.be/_RAhrisU6Mc?si=Pn0v4odAa3niJIar">
+                        <img src="/asset/maxresdefault (2).jpg" alt="">
+                        <div class="overlay">
+                            <span class="duration">03.12</span>
+                            <button class="play-btn"><i class="fas fa-play link-primary"></i></button>
+                        </div>
+                    </div>
+                    <div class="episode-info">
+                        <h3>Teaser Kisah: La vaguelette | Genshin Impact </h3>
+                        <div class="meta">
+                            <span class="views"><i class="fas fa-eye"></i> 3.2 Jt</span>
+                            <span class="date">1 years ago</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- More episode cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Spotlight -->
+    <section class="characters-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Character Spotlight</h2>
+            </div>
+            <div class="character-carousel">
+                <a class="character-card" target="_blank" rel="noopener noreferrer">
+                    <div class="character-img">
+                        <img src="/asset/gallery/furina (2).jpeg" alt="Furina">
+                    </div>
+                    <div>
+                        <h3 class="character-info text-light">Furina</h3>
+                        <p class="character-info text-light">Hydro Archon</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="text-light">Genshin Impact</h3>
+                    <p>RPG open-world dari miHoYo tentang eksplorasi dunia Teyvat.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Genres</a></li>
+                        <li><a href="#">New Releases</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <!-- NAVIGATION END -->
-
-        <!-- CAROUSEL IMAGE -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/asset/furina 1.2 .png" class="d-block w-100" alt="Furina"
-                        style="height: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                    <div class="carousel-caption text-start">
-                        <h5>Furina/Focalors</h5>
-                        <p>Furina adalah sosok yang ditunjuk langsung oleh Focalor (Archon Hydro Asli) untuk
-                            menggantikan posisinya sebagai Hydro Archon Fontaine.</p>
-                    </div>
+                <div class="col-lg-2">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <img src="/asset/furina 2.png" class="d-block w-100" alt="Furina"
-                        style="height: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                    <div class="carousel-caption text-start">
-                        <h5>Furina/Focalors</h5>
-                        <p>Asal mula nama Furina terinspirasi dari kata "Furrina", yang dalam kepercayaan Romawi kuno
-                            merujuk kepada dewi musim semi. Furrina juga dipercayai memiliki keterkaitan dengan unsur
-                            air.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/asset/furina 3.png" class="d-block w-100" alt="Furina"
-                        style="height: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
-                    <div class="carousel-caption text-start">
-                        <h5>Furina/Focalors</h5>
-                        <p>Selain menjabat sebagai seorang Archon Hydro, Furina juga memiliki hobi yang menarik, yaitu
-                            bernyanyi dan berselancar.</p>
+                <div class="col-lg-4">
+                    <h4>Subscribe</h4>
+                    <p>Get notified about new information and shows.</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your email">
+                        <button><i class="fas fa-paper-plane"></i></button>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- END OF CAROUSEL IMAGE -->
-
-        <!-- CONTENT 1 -->
-        <div class="row text-center align-items-center text-light">
-            <div class="col-12">
-                <div class="d-flex justify-content-center align-items-center mt-3">
-                    <img src="/asset/furina 4.png" width="250" height="250" class="me-3" />
-                    <div class="text-start">
-                        <h3 class="mt-0"><span style="color: rgb(255, 255, 255);">Furina/Focalors</span></h3>
-                        <i class="d-flex align-items-center">
-                            Kenalan ama Furina aja yuk, kalau &nbsp;
-                            <span style="color: rgb(89, 0, 255);">SantStyle</span>&nbsp; orangnya cuek nggak
-                            pentinglah</i>
-                <!-- TOMBOL INSTAGRAM -->
-                <a id="openPopup" href="https://www.instagram.com/santstyle.mv/?hl=id" >
-                    Instagram
-                </a>
-                        <!-- START POP UP -->
-                        <div id="popup" class="popup align-content-center">
-                            <div  class="popup-content">
-                                <span id="closePopup" class="close">&times;</span>
-                            </div>
-                        </div>
-                        <!--END POP UP -->
-                    </div>
+            <div class="copyright">
+                <p>&copy; 2025 Furina Genshin Impact (SantStyle). All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
         </div>
-        <!-- CONTENT 1 END -->
+    </footer>
 
-        <!-- CONTENT 2 -->
-        <div class="row text-dark mt-2">
-            <!-- Card Gallery -->
-            <div class="col-sm-4 g-2">
-                <div class="card shadow-lg border-0"
-                    style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff); width: 90%; margin: auto; position: relative; overflow: visible;">
-                    <div class="card-body" style="padding: 1rem;">
-                        <h5 class="card-title text-center text-uppercase fw-bold mb-3"
-                            style="font-size: 1rem; color: #001f3f; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">
-                            Gallery</h5>
-                        <p class="card-text text-center" style="font-size: 0.9rem; color: #002c6b;">Foto Furina
-                            yang tentu saja cantik, lucu, dan gemesin.</p>
-                        <a href="/gallery/" class="btn btn-primary d-block fw-bold shadow-sm"
-                            style="border-radius: 20px; background-color: #b3daff; color: #002c6b; font-size: 0.9rem;">Liat</a>
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm"
-                            style="transform: translate(-60%, -40%); padding: 0.5rem; font-size: 0.8rem; border: 2px solid #fff;">
-                            15
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card About -->
-            <div class="col-sm-4 g-2">
-                <div class="card shadow-lg border-0"
-                    style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff); width: 90%; margin: auto;">
-                    <div class="card-body" style="padding: 1rem;">
-                        <h5 class="card-title text-center text-uppercase fw-bold mb-3"
-                            style="font-size: 1rem; color: #001f3f; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">About
-                        </h5>
-                        <p class="card-text text-center" style="font-size: 0.9rem; color: #002c6b;">Hmm...masa kagak
-                            kepo sih sama Furina..</p>
-                        <a href="/about/" class="btn btn-primary d-block fw-bold shadow-sm"
-                            style="border-radius: 20px; background-color: #b3daff; color: #002c6b; font-size: 0.9rem;">Kepoin</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card Lore -->
-            <div class="col-sm-4 g-2">
-                <div class="card shadow-lg border-0"
-                    style="background: linear-gradient(135deg, #a3d5f7, #e1f0ff); width: 90%; margin: auto;">
-                    <div class="card-body" style="padding: 1rem;">
-                        <h5 class="card-title text-center text-uppercase fw-bold mb-3"
-                            style="font-size: 1rem; color: #001f3f; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">Lore
-                        </h5>
-                        <p class="card-text text-center" style="font-size: 0.9rem; color: #002c6b;">"Ratu Segala
-                            Perairan, Kerabat, Bangsa, dan Hukum"</p>
-                        <a href="/lore/" class="btn btn-primary d-block fw-bold shadow-sm"
-                            style="border-radius: 20px; background-color: #b3daff; color: #002c6b; font-size: 0.9rem;">Penasaran</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONTENT 2 END -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
-        integrity="sha384-oBqDVmMz4fnFO9gyb4FusqBsENQuS4l3GY6pa8iFZGXlOFlM1Rt8yJoMfxWnjF7j" 
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-        crossorigin="anonymous"></script>
-<script src="script.js"></script>
-            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
 </body>
+</html>
