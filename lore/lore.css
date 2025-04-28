@@ -20,12 +20,176 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.3;
+
+}
+/* ===========================
+Navbar Styles
+   =========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand i {
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    transform: translateY(-4px) scale(1.1);
+    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.nav-link::after {
+    content: none;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    opacity: 0;
+    transform: none;
+    width: 100%;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler i {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+/* ===========================
+Search Box
+   =========================== */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    width: 200px;
+    padding: 5px 10px;
+}
+
+.search-box input::placeholder {
+    color: white;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===========================
+Buttons
+   =========================== */
+.btn-premium {
+    background: var(--premium);
+    color: var(--dark);
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+    background: #2c83e1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
+}
+
+.btn-watch {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-watch:hover {
+    background: #0097e6;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+}
+
+.btn-trailer,
+.btn-favorite {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-trailer:hover,
+.btn-favorite:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
 }
 
 .content-wrapper {
     position: relative;
     background-color: transparent;
-    padding: 20px;
+    padding: 0px;
 }
 
 #lore-gallery {
@@ -39,7 +203,7 @@ body {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.125);
     transition: transform 0.3s ease;
     height: 400px;
 }
@@ -60,7 +224,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.435);
     color: white;
     padding: 15px;
     font-size: 0.9rem;
@@ -71,7 +235,7 @@ body {
     display: block;
     margin-top: 10px;
     font-size: 0.7rem;
-    color: #aaa;
+    color: #ffffff;
 }
 
 .fun-fact {
