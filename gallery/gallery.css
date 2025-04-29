@@ -222,122 +222,65 @@ body, html {
     background: none !important;
 }
 
+/* Remove grid layout for swiper */
 #gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 55px;
+    padding: 90px 0;
     margin-top: 0px;
 }
 
-#gallery img {
+/* Swiper container styles */
+.swiper {
     width: 100%;
+    padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    width: 300px;
     height: 400px;
-    object-fit: cover;
+    margin-right: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    opacity: 100;
-    transform: translateY(30px) rotateX(10deg);
-    transform-origin: center bottom;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
     filter: brightness(0.95);
-    will-change: transform, box-shadow, filter;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    -ms-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    -o-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Staggered Animation for Images */
-#gallery img:nth-child(1) { animation-delay: 0.2s; }
-#gallery img:nth-child(2) { animation-delay: 0.4s; }
-#gallery img:nth-child(3) { animation-delay: 0.6s; }
-#gallery img:nth-child(4) { animation-delay: 0.8s; }
-#gallery img:nth-child(5) { animation-delay: 1.0s; }
-#gallery img:nth-child(6) { animation-delay: 1.2s; }
-
-/* Hover Effects with Gentle Pulse */
-#gallery img:hover {
-    transform: scale(1.8) translateY(-8px) rotateX(0deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-    filter: brightness(1.08);
+.swiper-slide:hover {
+    transform: scale(1.1);
     z-index: 10;
-    animation: gentlePulse 2s infinite ease-in-out;
-    -webkit-transform: scale(1.8) translateY(-8px) rotateX(0deg);
-    -moz-transform: scale(1.8) translateY(-8px) rotateX(0deg);
-    -ms-transform: scale(1.8) translateY(-8px) rotateX(0deg);
-    -o-transform: scale(1.8) translateY(-8px) rotateX(0deg);
 }
 
-@keyframes gentlePulse {
-    0%, 100% { transform: scale(1.08) translateY(-8px); }
-    50% { transform: scale(1.1) translateY(-10px); }
+.swiper-slide:hover img {
+    filter: brightness(1.08);
 }
 
-/* Click/Press Effect */
-#gallery img:active {
-    transform: scale(0.96);
-    transition: all 0.1s ease-out;
-    filter: brightness(0.98);
-}
-
-/* Animation Classes */
-.fade-in {
-    animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-}
-
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(30px) scale(0.95); }
-    80% { transform: translateY(0) scale(1.02); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* Background Image Hover Effect */
-.image-background:hover img,
-.fixed-background:hover img {
-    transform: scale(1.03);
-}
-
-/* ===== RESPONSIVE STYLES ===== */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    #gallery {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    #gallery img {
+    .swiper-slide {
+        width: 250px;
         height: 350px;
-        transform: translateY(20px) rotateX(5deg);
-    }
-
-    #gallery img:hover {
-        transform: scale(1.05) translateY(-5px);
-        animation: gentlePulseMobile 2s infinite ease-in-out;
-    }
-
-    @keyframes gentlePulseMobile {
-        0%, 100% { transform: scale(1.05) translateY(-5px); }
-        50% { transform: scale(1.07) translateY(-6px); }
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 576px) {
-    #gallery {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    #gallery img {
+    .swiper-slide {
+        width: 200px;
         height: 300px;
-        transform: translateY(15px);
-    }
-    
-    /* Reduce animation delays on mobile */
-    #gallery img {
-        animation-delay: 0.1s !important;
+        margin-right: 15px;
     }
 }
 
