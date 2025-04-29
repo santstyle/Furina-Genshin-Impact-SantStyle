@@ -1,19 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Ambil semua elemen yang ingin dianimasikan
-    const cards = document.querySelectorAll(".card");
-    const paragraf = document.querySelector(".paragraf");
+    const loreCards = document.querySelectorAll(".lore-card");
+    const funFact = document.querySelector(".fun-fact");
 
-    // Tambahkan class animasi ke setiap card
-    cards.forEach((card, index) => {
-    setTimeout(() => {
-        card.classList.remove("hidden");
-        card.classList.add("fade-in");
-      }, index * 300); // Delay animasi untuk setiap card
+    // Set initial state for animation
+    loreCards.forEach(card => {
+        card.classList.add("hidden");
+    });
+    if (funFact) {
+        funFact.classList.add("hidden");
+    }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+
+    const revealOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                entry.target.classList.remove("hidden");
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+
+    loreCards.forEach(card => {
+        observer.observe(card);
     });
 
-    // Animasi untuk paragraf
-    setTimeout(() => {
-    paragraf.classList.remove("hidden");
-    paragraf.classList.add("slide-up");
-    }, cards.length * 300 + 300); // Delay animasi setelah card terakhir
+    if (funFact) {
+        observer.observe(funFact);
+    }
 });
