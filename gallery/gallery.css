@@ -207,7 +207,6 @@ Buttons
     }
 }
 
-
 /* ===== GALLERY STYLES ===== */
 .content-wrapper {
     position: relative;
@@ -288,3 +287,5 @@ body, html {
 html {
     scroll-behavior: smooth;
 }
+
+/* Fade-in animation for gallery images */

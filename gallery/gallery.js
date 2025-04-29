@@ -82,5 +82,16 @@ document.addEventListener('DOMContentLoaded', function () {
         img.addEventListener('mouseleave', function () {
             this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         });
+
+        // Add click event to navigate to image info page
+        img.addEventListener('click', function () {
+            // Extract image filename without extension and spaces for id
+            const src = this.getAttribute('src');
+            const match = src.match(/furina \((\d+)\)\.jpeg$/);
+            if (match) {
+                const imgId = 'furina' + match[1];
+                window.location.href = `image-info.html?img=${imgId}`;
+            }
+        });
     });
 });
