@@ -94,4 +94,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Shuffle content 2 gallery images
+    const content2Gallery = document.getElementById('content2-gallery');
+    if (content2Gallery) {
+        const slides = Array.from(content2Gallery.children);
+        for (let i = slides.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [slides[i], slides[j]] = [slides[j], slides[i]];
+        }
+        slides.forEach(slide => content2Gallery.appendChild(slide));
+    }
 });
