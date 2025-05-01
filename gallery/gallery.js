@@ -95,6 +95,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Set href of source buttons dynamically based on data-source attribute for all swiper slides including content2-gallery
+    const swiperSlides = document.querySelectorAll('#gallery .swiper-slide, #content2-gallery .swiper-slide');
+    swiperSlides.forEach(slide => {
+        const sourceUrl = slide.getAttribute('data-source');
+        const sourceButton = slide.querySelector('.source-button');
+        if (sourceUrl && sourceButton) {
+            sourceButton.href = sourceUrl;
+        }
+    });
+
     // Shuffle content 2 gallery images
     const content2Gallery = document.getElementById('content2-gallery');
     if (content2Gallery) {
