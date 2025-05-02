@@ -99,3 +99,18 @@ document.querySelectorAll('.episode-thumbnail').forEach(thumbnail => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const musicToggleBtn = document.getElementById('music-toggle');
+    const backgroundMusic = document.getElementById('background-music');
+    if (musicToggleBtn && backgroundMusic) {
+        musicToggleBtn.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                musicToggleBtn.textContent = 'Pause Music';
+            } else {
+                backgroundMusic.pause();
+                musicToggleBtn.textContent = 'Play Music';
+            }
+        });
+    }
+});

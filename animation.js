@@ -16,4 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateCards(episodeCards);
     animateCards(characterCards);
+
+    // Scroll reveal animation for furina gameplay guide section
+    const guideSection = document.getElementById('furina-gameplay-guide');
+    if (guideSection) {
+        const children = Array.from(guideSection.children);
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const revealOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    target.classList.add('visible');
+                    observer.unobserve(target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+        children.forEach((child, index) => {
+            child.style.transitionDelay = `${index * 150}ms`;
+            observer.observe(child);
+        });
+    }
 });
