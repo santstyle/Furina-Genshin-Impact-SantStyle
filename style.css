@@ -1,7 +1,7 @@
 /* ===========================
 Base Styles and Variables
    =========================== */
-   :root {
+:root {
     --primary: #ffffff;
     --secondary: #192a56;
     --dark: #86b8ff;
@@ -25,20 +25,11 @@ body {
     overscroll-behavior-x: none;
 }
 
-html, body {
+html,
+body {
     width: 100vw;
     overflow-x: hidden;
     overscroll-behavior-x: none;
-}
-
-
-/* ===========================
-Dropdown Menu
-   =========================== */
-.dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.082) !important;
-    backdrop-filter: blur(10px);
-    border: none;
 }
 
 /* ===========================
@@ -88,8 +79,6 @@ Navbar Styles
     left: 0;
     width: 100%;
     padding: 5px 0;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     z-index: 10;
 }
@@ -138,11 +127,11 @@ Navbar Styles
 }
 
 .navbar-toggler {
-    border: none 
+    border: none
 }
 
 .navbar-toggler i {
-    color: rgb(255, 255, 255) 
+    color: rgb(255, 255, 255)
 }
 
 .navbar-toggler:focus,
@@ -236,6 +225,7 @@ Buttons
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
 }
+
 /* ===========================
 Hero Section
    =========================== */
@@ -252,9 +242,8 @@ Hero Section
 #furina-profile {
     background-color: #ffffff;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-width: 100%;
-    color: #192a56;
+    color: #000000;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -262,15 +251,17 @@ Hero Section
 }
 
 #furina-profile h2 {
-    color: #2980b9; /* Blue */
+    color: #2980b9;
+    /* Blue */
     font-size: 2.5rem;
     margin-bottom: 30px;
-    border-bottom: 3px solid #f1c40f; /* Gold underline */
+    border-bottom: 5px solid #3292ff;
+    /* Gold underline */
     padding-bottom: 10px;
 }
 
 #furina-profile h3 {
-    color: #3498db; /* Lighter blue */
+    color: #3498db;
     margin-top: 20px;
     margin-bottom: 15px;
 }
@@ -290,13 +281,13 @@ Hero Section
 #furina-profile ul li {
     margin-bottom: 8px;
     font-size: 1.1rem;
-    color: #34495e;
+    color: #000000;
 }
 
 #furina-profile img {
     border-radius: 30px;
-    border: 0px solid #f1c40f;
-    /*Goldborder*/max-width: 100%;
+    /*Goldborder*/
+    max-width: 100%;
     height: auto;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -304,40 +295,68 @@ Hero Section
     -o-border-radius: 30px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-
-    #furina-profile h2 {
-        font-size: 2rem;
-    }
-
-    #furina-profile h3 {
-        font-size: 1.5rem;
-    }
+/* GALLERY 1 */
+#furina-gallery {
+    background: linear-gradient(305deg,
+            rgba(199, 226, 255, 1) 0%,
+            rgba(110, 180, 255, 1) 73%);
+    background-blend-mode: normal;
+    max-width: 100%;
+    color: #192a56;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+.judul-gambar {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.hero .rating {
-    margin-bottom: 20px;
+.button {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
-.hero .stars {
-    color: var(--premium);
-    margin-right: 10px;
+#furina-gallery img {
+    object-fit: cover;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-.hero .description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.6;
+/* END GALLERY 1*/
+/* GALLERY 2 */
+#furina-gallery2 {
+    background: linear-gradient(157deg,
+            rgba(89, 164, 255, 1) 5%,
+            rgba(191, 227, 255, 1) 100%);
+    background-blend-mode: normal;
+    max-width: 100%;
+    color: #192a56;
 }
+
+.judul-gambar2 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button2 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#furina-gallery2 img {
+    object-fit: cover;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* END GALLERY 2*/
 
 .actions {
     display: flex;
@@ -484,30 +503,17 @@ Episode Info
 }
 
 .meta-info {
-    display: flex; /* Atur elemen dalam satu baris */
-    gap: 10px; /* Tambahkan jarak antar elemen */
-    flex-wrap: wrap; /* Jika tidak cukup ruang, elemen akan pindah ke baris baru */
+    display: flex;
+    /* Atur elemen dalam satu baris */
+    gap: 10px;
+    /* Tambahkan jarak antar elemen */
+    flex-wrap: wrap;
+    /* Jika tidak cukup ruang, elemen akan pindah ke baris baru */
 }
 
 .meta-info span {
-    padding: 5px 10px; /* Tambahkan padding di dalam elemen */
-}
-
-/* ===========================
-Character Carousel
-   =========================== */
-.character-carousel {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 0px;
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-.character-carousel::-webkit-scrollbar {
-    display: none;
-    /* Chrome/Safari */
+    padding: 5px 10px;
+    /* Tambahkan padding di dalam elemen */
 }
 
 .character-card {
@@ -770,12 +776,14 @@ Responsive Styles
     padding: 30px;
     margin: 40px auto;
     max-width: 100%;
-    color: #192a56; /* Dark blue text */
+    color: #192a56;
+    /* Dark blue text */
 }
 
 #multimedia-gallery h2,
 #multimedia-gallery h3 {
-    color: #2980b9; /* Blue */
+    color: #2980b9;
+    /* Blue */
     margin-bottom: 20px;
 }
 
@@ -813,7 +821,6 @@ Responsive Styles
 
 .video-showcase {
     width: 100%;
-    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 0px;
 }
