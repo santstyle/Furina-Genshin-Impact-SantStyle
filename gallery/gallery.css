@@ -72,9 +72,9 @@ Navbar Styles
 }
 
 .nav-link:hover {
-    color: white !important;
+    color: var(--primary) !important;
     transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px white, 0 0 8px white;
+    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
     transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -105,10 +105,7 @@ Navbar Styles
     box-shadow: none !important;
     border: none !important;
 }
-.content {
-    position: relative;
-    z-index: 1;
-}
+
 /* ===========================
 Search Box
    =========================== */
@@ -176,6 +173,10 @@ Buttons
     background: #0097e6;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
 }
 
 .btn-trailer,
@@ -301,6 +302,14 @@ body, html {
     }
 }
 
+/* TITLE */
+.title {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 500px;
+    padding-left: 20px;
+
+}
 /* CONTENT 2 GALLERY GRID */
 #content2-gallery {
     display: grid;
@@ -373,4 +382,3 @@ html {
     opacity: 1;
     pointer-events: auto;
 }
-
