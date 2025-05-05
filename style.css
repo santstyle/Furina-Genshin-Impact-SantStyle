@@ -1,7 +1,7 @@
 /* ===========================
 Base Styles and Variables
    =========================== */
-:root {
+   :root {
     --primary: #ffffff;
     --secondary: #192a56;
     --dark: #86b8ff;
@@ -137,21 +137,18 @@ Navbar Styles
     width: 100%;
 }
 
-/* Navbar Toggler */
 .navbar-toggler {
-    border: none !important;
+    border: none 
 }
 
 .navbar-toggler i {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255) 
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+    outline: none
 }
 
 /* ===========================
@@ -783,7 +780,6 @@ Responsive Styles
 }
 
 .image-gallery {
-    display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -810,7 +806,7 @@ Responsive Styles
 }
 
 .credit {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: #555;
     margin-top: 8px;
 }
@@ -820,10 +816,4 @@ Responsive Styles
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 0px;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
 }
-
