@@ -301,12 +301,3 @@ Buttons
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
-</create_file>
-
-<attempt_completion>
-<result>
-I have updated the CSS for the "furina bubble" video background on the about page to add a mask-image gradient that fades the video opacity from fully visible on the left to transparent on the right. This creates a smooth blending effect so the video appears as a decorative left-side element blending into the page background.
-
-This completes the requested update.
-</result>
-</attempt_completion>
