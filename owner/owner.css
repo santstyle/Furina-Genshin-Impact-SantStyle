@@ -12,14 +12,6 @@ html{
     object-fit: cover;
     z-index: -1;
 }
-/* ===========================
-Dropdown Menu
-   =========================== */
-.dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.082) !important;
-    backdrop-filter: blur(10px);
-    border: none;
-}
 /* Navbar Styles */
 .navbar {
     position: fixed;
@@ -27,8 +19,6 @@ Dropdown Menu
     left: 0;
     width: 100%;
     padding: 5px 0;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     z-index: 10;
 }
@@ -42,7 +32,6 @@ Dropdown Menu
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .navbar-brand i {
@@ -55,7 +44,6 @@ Dropdown Menu
     margin: 0 10px;
     transition: all 0.3s ease;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .nav-link:hover {
@@ -145,7 +133,7 @@ Buttons
 }
 
 .btn-premium:hover {
-    background: #2c83e1;
+    background: #007bff;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
 }
