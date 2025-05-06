@@ -3,8 +3,8 @@ Base Styles and Variables
    =========================== */
 :root {
     --primary: #ffffff;
-    --secondary: #192a56;
-    --dark: #86b8ff;
+    --secondary: #ffffff;
+    --dark: #62a4ff;
     --light: #f5f6fa;
 }
 
@@ -92,7 +92,7 @@ Navbar Styles
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+
 }
 
 .navbar-brand i {
@@ -105,13 +105,13 @@ Navbar Styles
     margin: 0 10px;
     transition: all 0.3s ease;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
 }
 
 .nav-link:hover {
-    color: var(--primary) !important;
+    color: white !important;
     transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    text-shadow: 0 0 12px white, 0 0 8px white;
     transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -126,18 +126,21 @@ Navbar Styles
     width: 100%;
 }
 
+/* Navbar Toggler */
 .navbar-toggler {
-    border: none
+    border: none !important;
 }
 
 .navbar-toggler i {
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler:focus-visible {
-    outline: none
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 /* ===========================
@@ -189,9 +192,9 @@ Buttons
 }
 
 .btn-premium:hover {
-    background: #2c83e1;
+    background: #0080ff;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .btn-watch {
@@ -204,9 +207,9 @@ Buttons
 }
 
 .btn-watch:hover {
-    background: #0097e6;
+    background: #ffffff;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-trailer,
@@ -357,6 +360,66 @@ Hero Section
 }
 
 /* END GALLERY 2*/
+/* GALLERY 3 */
+#furina-gallery3 {
+    background: linear-gradient(305deg,
+            rgba(199, 226, 255, 1) 0%,
+            rgba(110, 180, 255, 1) 73%);
+    background-blend-mode: normal;
+    max-width: 100%;
+    color: #192a56;
+}
+
+.judul-gambar3 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button3 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#furina-gallery3 img {
+    object-fit: cover;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* END GALLERY 3*/
+/* GALLERY 4 */
+#furina-gallery4 {
+    background: linear-gradient(157deg,
+            rgba(89, 164, 255, 1) 5%,
+            rgba(191, 227, 255, 1) 100%);
+    background-blend-mode: normal;
+    max-width: 100%;
+    color: #192a56;
+}
+
+.judul-gambar4 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button4 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#furina-gallery4 img {
+    object-fit: cover;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
 
 .actions {
     display: flex;
@@ -418,7 +481,6 @@ Sections and Grids
 
 .episode-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .episode-thumbnail {
@@ -674,11 +736,14 @@ Responsive Styles
     .hero h1 {
         font-size: 2.8rem;
     }
+}
+
+
 
     .search-box input {
         width: 150px;
     }
-}
+
 
 @media (max-width: 768px) {
     .hero {
@@ -768,59 +833,6 @@ Responsive Styles
     }
 }
 
-/* Multimedia Gallery Section Styles */
-#multimedia-gallery {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 100%;
-    color: #192a56;
-    /* Dark blue text */
-}
 
-#multimedia-gallery h2,
-#multimedia-gallery h3 {
-    color: #2980b9;
-    /* Blue */
-    margin-bottom: 20px;
-}
 
-.image-gallery {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
 
-.gallery-item {
-    flex: 1 1 200px;
-    max-width: 250px;
-    text-align: center;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-
-.credit {
-    font-size: 1.5rem;
-    color: #555;
-    margin-top: 8px;
-}
-
-.video-showcase {
-    width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0px;
-}
