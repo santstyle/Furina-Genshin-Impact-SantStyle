@@ -41,8 +41,6 @@ Navbar Styles
     left: 0;
     width: 100%;
     padding: 5px 0;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     z-index: 10;
 }
@@ -159,7 +157,7 @@ Buttons
 }
 
 .btn-premium:hover {
-    background: #2c83e1;
+    background: #007bff;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
 }
