@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1300);
     }
 
-    // Smooth scroll for internal anchor links
+    // Smooth scroll
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar active link highlighting based on current URL
+    // Navbar active link
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname;
     navLinks.forEach(link => {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Navbar toggler icon animation (optional)
+    // Navbar toggler icon animation )
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
         navbarToggler.addEventListener('click', () => {
@@ -89,12 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-/*EPISODE */
+// EPISODE 
 document.querySelectorAll('.episode-thumbnail').forEach(thumbnail => {
     thumbnail.addEventListener('click', () => {
-        const url = thumbnail.getAttribute('data-url'); // Ambil URL dari atribut data-url
+        const url = thumbnail.getAttribute('data-url'); 
         if (url) {
-            window.open(url, '_blank'); // Buka link di tab baru
+            window.open(url, '_blank'); 
         }
     });
 });
+
+// LATIHAN

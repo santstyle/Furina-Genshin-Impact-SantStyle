@@ -1,27 +1,13 @@
-// animation.js
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize GSAP and plugins
     gsap.registerPlugin(ScrollTrigger);
-
-    // 1. HERO SECTION ANIMATIONS
     animateHeroSection();
-
-    // 2. FEATURED EPISODES ANIMATIONS
     animateFeaturedEpisodes();
-
-    // 3. CHARACTER PROFILE ANIMATIONS
     animateCharacterProfile();
-
-    // 4. GALLERY ANIMATIONS
     animateGalleries();
-
-    // 5. CHARACTER SPOTLIGHT ANIMATIONS
     animateCharacterSpotlight();
-
-    // 6. FOOTER ANIMATIONS
     animateFooter();
 
-    // Helper functions for each section
     function animateHeroSection() {
         // Typewriter effect for main title
         const heroTitle = document.querySelector('.hero h1');
@@ -30,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             heroTitle.textContent = '';
             typewriterEffect(heroTitle, text, 100);
         }
-
         // Glow on hover
         const glowElements = document.querySelectorAll('.hero h1, .judul-gambar, .judul-gambar2');
         glowElements.forEach(el => {
@@ -102,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function animateCharacterProfile() {
-        // Profile image animation
+        // Profile animation
         gsap.from('#furina-profile img', {
             opacity: 0,
             x: -50,
@@ -139,12 +124,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function animateGalleries() {
-        // Animasi untuk semua gallery (1-4)
+        // Animasi Gallery
         const galleries = [
-            { id: '#furina-gallery', direction: 'left', index: 0 }, // Gallery 1
-            { id: '#furina-gallery2', direction: 'right', index: 0 }, // Gallery 2
-            { id: '#furina-gallery3', direction: 'left', index: 1 }, // Gallery 3
-            { id: '#furina-gallery4', direction: 'right', index: 1 } // Gallery 4
+            { id: '#furina-gallery', direction: 'left', index: 0 }, 
+            { id: '#furina-gallery2', direction: 'right', index: 0 }, 
+            { id: '#furina-gallery3', direction: 'left', index: 1 }, 
+            { id: '#furina-gallery4', direction: 'right', index: 1 } 
         ];
     
         galleries.forEach(gallery => {
@@ -345,6 +330,5 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // Initialize scroll animations
     ScrollTrigger.refresh();
 });
