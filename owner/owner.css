@@ -131,8 +131,11 @@ Buttons
 .profile-picture {
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
   object-fit: cover;
   border: 2px solid white;
+  transition: all 0.3s ease;
 }
 
 .profile-name {
