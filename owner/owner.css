@@ -1,171 +1,191 @@
-html{
-    margin: 0; 
-    padding: 0;
-    }
-    
 .background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
-/* Navbar Styles */
+
+.content {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  padding-bottom: 40px;
+}
+
+/* ===========================
+Navbar Styles
+   =========================== */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px 0;
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
 }
 
 .navbar-brand i {
-    color: white;
+  color: white;
 }
 
 .nav-link {
-    color: white !important;
-    font-weight: 500;
-    margin: 0 10px;
-    transition: all 0.3s ease;
-    position: relative;
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-link:hover {
-    color: white !important;
-    transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px white, 0 0 8px white;
-    transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
+  color: white !important;
+  transform: translateY(-4px) scale(1.1);
+  text-shadow: 0 0 12px white, 0 0 8px white;
+  transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
 .nav-link::after {
-    content: none;
+  content: none;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    opacity: 0;
-    transform: none;
-    width: 100%;
+  opacity: 0;
+  transform: none;
+  width: 100%;
 }
 
 /* Navbar Toggler */
 .navbar-toggler {
-    border: none !important;
+  border: none !important;
 }
 
 .navbar-toggler i {
-    color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-.content {
-    position: relative;
-    z-index: 1;
-}
-/* ===========================
-Search Box
-   =========================== */
-.search-box {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 5px 15px;
-    transition: all 0.3s ease;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.search-box:hover {
-    background: rgba(255, 255, 255, 0.2);
+/* Follow Button */
+.follow-button {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.search-box input {
-    background: transparent;
-    border: none;
-    color: white;
-    outline: none;
-    width: 200px;
-    padding: 5px 10px;
-}
-
-.search-box input::placeholder {
-    color: white;
-}
-
-.search-box button {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
+.follow-button :hover {
+  color: white !important;
+  transform: translateY(-4px) scale(1.1);
+  text-shadow: 0 0 12px white, 0 0 8px white;
+  transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
 /* ===========================
 Buttons
    =========================== */
 .btn-premium {
-    background: var(--premium);
-    color: var(--dark);
-    font-weight: 600;
-    border-radius: 30px;
-    padding: 8px 20px;
-    transition: all 0.3s ease;
+  background: var(--premium);
+  color: var(--dark);
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
 }
 
 .btn-premium:hover {
-    background: #007bff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
+  background: #0080ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-.btn-watch {
-    background: var(--primary);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+/* Profile Section */
+.profile-section {
+  margin-top: 80px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 11;
 }
 
-.btn-watch:hover {
-    background: #0097e6;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid white;
 }
 
-.btn-trailer,
-.btn-favorite {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.profile-name {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
 }
 
-.btn-trailer:hover,
-.btn-favorite:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
+.profile-bio {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.profile-stats div {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Content Grid Section */
+.content-grid {
+  margin-top: 30px;
+  position: relative;
+  z-index: 11;
+}
+
+.content-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.content-item:hover {
+  transform: scale(1.05);
+  z-index: 12;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-section {
+    text-align: center;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-stats {
+    justify-content: center;
+  }
 }
