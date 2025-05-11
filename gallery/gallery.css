@@ -3,39 +3,20 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    perspective: 1000px;
+    perspective: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg,
+            rgba(181, 217, 255, 1) 12%,
+            rgba(61, 158, 255, 1) 84%);
+    background-blend-mode: normal;
 }
 
-/* SIMPLE FIXED BACKGROUND */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
 
-.background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-/* ===========================
-Dropdown Menu
-   =========================== */
-.dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.082) !important;
-    backdrop-filter: blur(10px);
-    border: none;
-}
+
 /* ===========================
 Navbar Styles
    =========================== */
 .navbar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -85,7 +66,7 @@ Navbar Styles
     width: 100%;
 }
 
-/* Navbar Toggler */
+
 .navbar-toggler {
     border: none !important;
 }
@@ -102,41 +83,6 @@ Navbar Styles
     border: none !important;
 }
 
-/* ===========================
-Search Box
-   =========================== */
-.search-box {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 5px 15px;
-    transition: all 0.3s ease;
-}
-
-.search-box:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.search-box input {
-    background: transparent;
-    border: none;
-    color: white;
-    outline: none;
-    width: 200px;
-    padding: 5px 10px;
-}
-
-.search-box input::placeholder {
-    color: white;
-}
-
-.search-box button {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
 
 /* ===========================
 Buttons
@@ -192,164 +138,73 @@ Buttons
     transform: translateY(-3px);
 }
 
-/* Keyframes for fade-in effect */
+
 @keyframes fadeInBackground {
-    from { 
+    from {
         opacity: 0;
         filter: blur(5px);
     }
-    to { 
+
+    to {
         opacity: 1;
         filter: blur(0);
     }
 }
 
-/* ===== GALLERY STYLES ===== */
-.content-wrapper {
-    position: relative;
-    background-color: transparent;
-    padding-top: 0px;
-    margin-top: 0 !important;
+
+.gallery-grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    background: none !important;
-}
-
-/* Remove grid layout for swiper */
-#gallery {
-    padding: 90px 0;
-    margin-top: 0px;
-}
-
-/* Swiper container styles */
-.swiper {
+.gallery-grid .gallery-item {
     width: 100%;
-    padding-bottom: 50px;
-}
-
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.swiper-slide {
-    width: 300px;
-    height: 400px;
-    margin-right: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 12px;
-    filter: brightness(0.95);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.swiper-slide:hover {
-    transform: scale(1.1);
+.gallery-grid .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
-.swiper-slide:hover img {
-    filter: brightness(1.08);
-}
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .swiper-slide {
-        width: 250px;
-        height: 350px;
-        margin-right: 20px;
+    .gallery-grid .col-6 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
     }
-    #content2-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 10px;
-        padding: 20px;
-    }
-    #content2-gallery .swiper-slide {
-        width: 140px;
-        height: 190px;
+    .source-button {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 }
 
 @media (max-width: 576px) {
-    .swiper-slide {
-        width: 200px;
-        height: 300px;
-        margin-right: 15px;
+    .gallery-grid .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-    #content2-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 5px;
-        padding: 10px;
-    }
-    #content2-gallery .swiper-slide {
-        width: 120px;
-        height: 160px;
+    .source-button {
+        font-size: 11px;
+        padding: 5px 10px;
     }
 }
 
-/* TITLE */
-.title {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-weight: 500px;
-    padding-left: 20px;
-
-}
-/* CONTENT 2 GALLERY GRID */
-#content2-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-#content2-gallery .swiper-slide {
-    width: 180px;
-    height: 240px;
-    margin-right: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-#content2-gallery .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: brightness(0.95);
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-#content2-gallery .swiper-slide:hover {
-    transform: scale(1.05);
-    z-index: 10;
-}
-
-#content2-gallery .swiper-slide:hover img {
-    filter: brightness(1.08);
-}
-
-/* ===== SMOOTH SCROLLING ===== */
-html {
-    scroll-behavior: smooth;
-}
-
-.swiper-slide {
-    position: relative;
-    overflow: hidden;
+@media (max-width: 400px) {
+    .gallery-grid .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .source-button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
 }
 
 .source-button {
@@ -374,7 +229,80 @@ html {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
+.gallery-grid .col-6 {
+    position: relative;
+}
+
+.gallery-grid .col-6:hover .source-button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .swiper-slide:hover .source-button {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* Upload Form Styles */
+#upload-form {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#upload-form h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333333;
+}
+
+#upload-form label {
+    font-weight: 500;
+    color: #555555;
+}
+
+#upload-form input[type="file"],
+#upload-form input[type="url"] {
+    width: 250px;
+    max-width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#upload-form input[type="file"]:focus,
+#upload-form input[type="url"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#upload-form button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#upload-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    #upload-form {
+        padding: 10px 15px;
+    }
+
+    #upload-form input[type="file"],
+    #upload-form input[type="url"] {
+        width: 100%;
+    }
 }
