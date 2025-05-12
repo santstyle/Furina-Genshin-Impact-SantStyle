@@ -125,7 +125,7 @@ Buttons
   margin-top: 80px;
   padding-top: 20px;
   position: relative;
-  z-index: 11;
+  z-index: -1;
 }
 
 .profile-picture {
@@ -147,7 +147,7 @@ Buttons
 .profile-bio {
   font-size: 1.1rem;
   margin-top: 10px;
-  color: #ddd;
+  color: #ffffff;
 }
 
 .profile-stats div {
