@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             heroTitle.textContent = '';
             typewriterEffect(heroTitle, text, 100);
         }
-        // Glow on hover
         const glowElements = document.querySelectorAll('.hero h1, .judul-gambar, .judul-gambar2');
         glowElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // Hover effect
+            // Hover 
             card.addEventListener('mouseenter', () => {
                 gsap.to(card, {
                     scale: 1.03,

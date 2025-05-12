@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animate hero section elements smoothly on page load
+    // Animate hero 
     const heroTitle = document.querySelector('.hero h1');
     const heroRating = document.querySelector('.hero .rating');
     const heroDescription = document.querySelector('.hero .description');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1300);
     }
 
-    // Smooth scroll
+    // SMOTH SCROLL
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar active link
+    // NAVBAR ACTIVE LINK
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname;
     navLinks.forEach(link => {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Navbar toggler icon animation )
+    // NAVBAR TOGGLER ANIMATION )
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
         navbarToggler.addEventListener('click', () => {
@@ -99,4 +99,3 @@ document.querySelectorAll('.episode-thumbnail').forEach(thumbnail => {
     });
 });
 
-// LATIHAN
