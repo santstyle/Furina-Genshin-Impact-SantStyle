@@ -9,6 +9,7 @@ body {
             rgba(181, 217, 255, 1) 12%,
             rgba(61, 158, 255, 1) 84%);
     background-blend-mode: normal;
+    min-height: 100vh;
 }
 
 
@@ -305,4 +306,48 @@ Buttons
     #upload-form input[type="url"] {
         width: 100%;
     }
+}
+
+/* Popup styles */
+.upload-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1e3c72;
+    background-image: linear-gradient(315deg, #1e3c72 0%, #2a5298 74%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(42, 82, 152, 0.7);
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.upload-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#upload-popup-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+#upload-popup-close:hover {
+    color: #ffcc00;
 }

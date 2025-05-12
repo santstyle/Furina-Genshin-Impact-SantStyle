@@ -34,7 +34,7 @@
                                                         <a class="nav-link" href="/about/index.html"><i></i> About</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                        <a class="nav-link" href="/lore/index.html"><i></i> Lore</a>
+                                                        <a class="nav-link" href="/character/index.html"><i></i> Character</a>
                                                 </li>
                                                 <li class="nav-item">
                                                         <a class="nav-link" href="/owner/index.html"><i></i> Owner</a>
@@ -48,9 +48,8 @@
                         </div>
                 </nav>
 
-                <!-- Gallery Upload Form -->
                 <section class="container mt-4">
-                        <h3>Tambah Foto ke Gallery</h3>
+                        <h3 class="text-light">Tambah Foto ke Gallery</h3>
                         <form id="upload-form" class="row g-3 align-items-center">
                                 <div class="col-auto">
                                         <label for="image-input" class="col-form-label">Pilih Gambar:</label>
@@ -67,9 +66,15 @@
                                                 class="form-control" />
                                 </div>
                                 <div class="col-auto">
-                                        <button type="submit" class="btn btn-primary">Upload</button>
+                                        <button type="submit"
+                                                class="btn btn-premium ms-3 text-light rounded-5">Upload</button>
                                 </div>
                         </form>
+
+                        <div id="upload-popup" class="upload-popup hidden">
+                                <span id="upload-popup-message"></span>
+                                <button id="upload-popup-close" aria-label="Close popup">&times;</button>
+                        </div>
                 </section>
 
                 <!-- Gallery Grid -->
@@ -80,16 +85,14 @@
                                                 class="gallery-item img-fluid" />
                                         <a href="https://in.pinterest.com/pin/1094726622035105847/"
                                                 class="source-button text-center " target="_blank"
-                                                rel="noopener noreferrer">Lihat
-                                                Sumber</a>
+                                                rel="noopener noreferrer">Lihat Sumber</a>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                                         <img src="/asset/gallery/furina (2).jpeg" alt="Furina 2"
                                                 class="gallery-item img-fluid" />
                                         <a href="https://in.pinterest.com/pin/1114781714014811228/"
                                                 class="source-button text-center" target="_blank"
-                                                rel="noopener noreferrer">Lihat
-                                                Sumber</a>
+                                                rel="noopener noreferrer">Lihat Sumber</a>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                                         <img src="/asset/gallery/furina (3).jpeg" alt="Furina 3"
