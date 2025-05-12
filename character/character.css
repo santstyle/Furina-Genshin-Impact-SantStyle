@@ -106,3 +106,35 @@ Buttons
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(49, 170, 251, 0.3);
 }
+
+.character-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 20px 20px 20px;
+    min-height: calc(100vh - 60px);
+    box-sizing: border-box;
+}
+
+.character-description {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-character {
+    flex-shrink: 0;
+    max-width: 45%;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-character img.default-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
