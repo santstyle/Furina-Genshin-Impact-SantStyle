@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     animateFooter();
 
     function animateHeroSection() {
-        // Typewriter effect for main title
         const heroTitle = document.querySelector('.hero h1');
         if (heroTitle) {
             const text = heroTitle.textContent;
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function animateFeaturedEpisodes() {
-        // Episode cards animation
         const episodeCards = document.querySelectorAll('.episode-card');
         episodeCards.forEach((card, index) => {
             gsap.from(card, {
@@ -47,8 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     toggleActions: "play none none none"
                 }
             });
-
-            // Hover 
             card.addEventListener('mouseenter', () => {
                 gsap.to(card, {
                     scale: 1.03,
@@ -65,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // Play button animation
         const playButtons = document.querySelectorAll('.play-btn');
         playButtons.forEach(btn => {
             btn.addEventListener('mouseenter', () => {
@@ -86,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function animateCharacterProfile() {
-        // Profile animation
         gsap.from('#furina-profile img', {
             opacity: 0,
             x: -50,
@@ -97,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Text content animation
         gsap.from('#furina-profile h3, #furina-profile p, #furina-profile li', {
             opacity: 0,
             y: 20,
@@ -109,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Border animation
         gsap.from('#furina-profile h2', {
             opacity: 0,
             scaleX: 0,
@@ -123,32 +115,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function animateGalleries() {
-        // Animasi Gallery
         const galleries = [
-            { id: '#furina-gallery', direction: 'left', index: 0 }, 
-            { id: '#furina-gallery2', direction: 'right', index: 0 }, 
-            { id: '#furina-gallery3', direction: 'left', index: 1 }, 
-            { id: '#furina-gallery4', direction: 'right', index: 1 } 
+            { id: '#furina-gallery', direction: 'left', index: 0 },
+            { id: '#furina-gallery2', direction: 'right', index: 0 },
+            { id: '#furina-gallery3', direction: 'left', index: 1 },
+            { id: '#furina-gallery4', direction: 'right', index: 1 }
         ];
-    
+
         galleries.forEach(gallery => {
             animateGallery(gallery.id, gallery.direction, gallery.index);
         });
-    
+
         function animateGallery(gallerySelector, direction, index) {
             const gallery = document.querySelector(gallerySelector);
             if (!gallery) return;
-    
+
             const img = gallery.querySelector('img');
             const content = gallery.querySelector('.text-center');
             const title = gallery.querySelector('.judul-gambar, .judul-gambar2, .judul-gambar3, .judul-gambar4');
             const button = gallery.querySelector('.btn-watch');
-    
+
             const imgFrom = direction === 'left' ? { x: -100, opacity: 0 } : { x: 100, opacity: 0 };
             const contentFrom = direction === 'left' ? { x: 100, opacity: 0 } : { x: -100, opacity: 0 };
-            const delay = index * 0.3; 
-    
-            // Image animation
+            const delay = index * 0.3;
+
             gsap.from(img, {
                 ...imgFrom,
                 duration: 1,
@@ -158,8 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     start: "top 80%"
                 }
             });
-    
-            // Title animation
+
             gsap.from(title, {
                 y: 30,
                 opacity: 0,
@@ -170,8 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     start: "top 80%"
                 }
             });
-    
-            // Button animation
+
             gsap.from(button, {
                 y: 20,
                 opacity: 0,
@@ -182,8 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     start: "top 80%"
                 }
             });
-    
-            // Button hover effect
+
             button.addEventListener('mouseenter', () => {
                 gsap.to(button, {
                     y: -3,
@@ -204,8 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function animateCharacterSpotlight() {
         const spotlight = document.querySelector('.characters-section');
         if (!spotlight) return;
-
-        // Card animation
         gsap.from('.character-card', {
             opacity: 0,
             y: 50,
@@ -216,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Image hover effect
         const characterCards = document.querySelectorAll('.character-card');
         characterCards.forEach(card => {
             card.addEventListener('mouseenter', () => {
@@ -250,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const footer = document.querySelector('footer');
         if (!footer) return;
 
-        // Column animations
         gsap.from('footer .col-lg-4, footer .col-lg-2', {
             opacity: 0,
             y: 30,
@@ -262,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Social icons animation
         gsap.from('.social-links a', {
             opacity: 0,
             y: 20,
@@ -274,7 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Input focus effect
         const input = document.querySelector('.subscribe-form input');
         if (input) {
             input.addEventListener('focus', () => {
@@ -292,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Common animation functions
+
     function typewriterEffect(element, text, speed) {
         let i = 0;
         const timer = setInterval(() => {
