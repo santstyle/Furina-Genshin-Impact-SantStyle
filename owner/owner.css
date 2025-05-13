@@ -156,55 +156,7 @@ Buttons
   color: #fff;
 }
 
-/* Content */
-.content-grid {
-  margin-top: 30px;
-  position: relative;
-  z-index: 11;
-}
 
-
-.content-item {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.content-item:hover {
-  transform: scale(1.05);
-  z-index: 12;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-
-}
-
-.source-button {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #a9dbff;
-  background-image: linear-gradient(315deg, rgb(93, 169, 255) 0%, #95d3ff 74%);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 10;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.col-4:hover .source-button,
-.content-item:hover + .source-button {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -219,8 +171,30 @@ Buttons
   .profile-stats {
     justify-content: center;
   }
-}
 
-.col-4 {
-  position: relative;
+  /* Override Bootstrap stacking for profile-section */
+  .profile-section .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-section .col-md-3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 0 !important;
+  }
+
+  .profile-section .col-md-9 {
+    flex: 0 0 70%;
+    max-width: 70%;
+    text-align: left;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
 }
