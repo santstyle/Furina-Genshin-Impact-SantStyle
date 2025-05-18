@@ -1,89 +1,106 @@
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
 
-.content {
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-  padding-bottom: 40px;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  perspective: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg,
+          rgba(181, 217, 255, 1) 12%,
+          rgba(61, 158, 255, 1) 84%) !important;
+  background-blend-mode: normal !important;
+  min-height: 100vh;
 }
 
 /* ===========================
 Navbar Styles
    =========================== */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 0;
-  transition: all 0.3s ease;
-  z-index: 10;
+   .navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 10px 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
 }
 
 .navbar-brand {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
 }
 
 .navbar-brand i {
-  color: white;
+    color: white;
 }
 
 .nav-link {
-  color: white !important;
-  font-weight: 500;
-  margin: 0 10px;
-  transition: all 0.3s ease;
-  position: relative;
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-link:hover {
-  color: white !important;
-  transform: translateY(-4px) scale(1.1);
-  text-shadow: 0 0 12px white, 0 0 8px white;
-  transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
+    color: white !important;
+    transform: translateY(-4px) scale(1.1);
+    text-shadow: 0 0 12px white, 0 0 8px white;
+    transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
 .nav-link::after {
-  content: none;
+    content: none;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
-  opacity: 0;
-  transform: none;
-  width: 100%;
+    opacity: 0;
+    transform: none;
+    width: 100%;
 }
 
-/* Navbar Toggler */
+
 .navbar-toggler {
-  border: none !important;
+    border: none !important;
 }
 
 .navbar-toggler i {
-  color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler i {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.content {
+    position: relative;
+    z-index: 1;
 }
 
 /* Follow Button */
