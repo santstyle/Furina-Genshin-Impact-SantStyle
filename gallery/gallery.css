@@ -12,8 +12,6 @@ body {
     min-height: 100vh;
 }
 
-
-
 /* ===========================
 Navbar Styles
    =========================== */
@@ -310,7 +308,6 @@ Buttons
 
 /* Popup styles */
 .upload-popup {
-    position: fixed;
     top: 20px;
     right: 20px;
     background-color: #1e3c72;
