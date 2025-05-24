@@ -1,21 +1,15 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8ff; /* Very light blue background */
-    color: #333;
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.container-fluid {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    perspective: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg,
+            rgba(181, 217, 255, 1) 12%,
+            rgba(61, 158, 255, 1) 84%) !important;
+    background-blend-mode: normal !important;
     min-height: 100vh;
-    background: transparent; 
-    position: relative;
-    z-index: 2;
-    padding-left: 45vw; 
 }
 
 .nav-link:hover {
@@ -36,7 +30,6 @@ Dropdown Menu
 Navbar Styles
    =========================== */
 .navbar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -54,7 +47,6 @@ Navbar Styles
     font-size: 1.8rem;
     font-weight: 700;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .navbar-brand i {
@@ -67,13 +59,12 @@ Navbar Styles
     margin: 0 10px;
     transition: all 0.3s ease;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .nav-link:hover {
-    color: var(--primary) !important;
+    color: white !important;
     transform: translateY(-4px) scale(1.1);
-    text-shadow: 0 0 12px var(--primary), 0 0 8px var(--primary);
+    text-shadow: 0 0 12px white, 0 0 8px white;
     transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
@@ -88,7 +79,7 @@ Navbar Styles
     width: 100%;
 }
 
-/* Navbar Toggler */
+
 .navbar-toggler {
     border: none !important;
 }
@@ -103,10 +94,6 @@ Navbar Styles
     outline: none !important;
     box-shadow: none !important;
     border: none !important;
-}
-.content {
-    position: relative;
-    z-index: 1;
 }
 /* ===========================
 Search Box
@@ -294,8 +281,10 @@ Buttons
     width: 40vw;
     height: 100vh;
     object-fit: cover;
-    z-index: 1;
+    z-index: -1;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    mask-composite: intersect;
 }
