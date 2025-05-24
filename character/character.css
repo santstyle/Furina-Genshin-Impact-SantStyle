@@ -16,7 +16,6 @@ body {
 Navbar Styles
    =========================== */
 .navbar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -125,7 +124,7 @@ Buttons
 
 .profile-character {
     flex-shrink: 0;
-    max-width: 45%;
+    max-width: 30%;
     margin-top: 0;
     padding-top: 0;
     display: flex;
@@ -133,8 +132,44 @@ Buttons
 }
 
 .profile-character img.default-img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 576px) {
+    .character-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 10px 20px 10px;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+
+    .character-description {
+        font-size: 40px;
+        color: #ffffff;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .profile-character {
+        flex-shrink: 0;
+        max-width: 100%;
+        margin-top: 20px;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-character img.default-img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
 }
