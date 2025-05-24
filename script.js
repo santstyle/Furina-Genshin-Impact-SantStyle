@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1300);
     }
 
-    // SMOTH SCROLL
+    // SMOOTH SCROLL
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -81,14 +81,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // NAVBAR TOGGLER ANIMATION )
+    // NAVBAR TOGGLER ANIMATION
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
         navbarToggler.addEventListener('click', () => {
             navbarToggler.classList.toggle('open');
         });
     }
+
+    // PAGE LOAD ANIMATION (fade in opacity from 0 to 1) using GSAP
+    if (typeof gsap !== 'undefined') {
+        gsap.fromTo('body',
+            { opacity: 0 },
+            { opacity: 1, duration: 0.8, ease: "power1.out" }
+        );
+    }
+
+    // PAGE TRANSITION ANIMATION ON NAVIGATION LINKS (fade out only) using GSAP
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) {
+                return;
+            }
+            e.preventDefault();
+            if (typeof gsap !== 'undefined') {
+                gsap.to('body', {
+                    duration: 0.6,
+                    opacity: 0,
+                    ease: "power1.inOut",
+                    onComplete: () => {
+                        window.location.href = href;
+                    }
+                });
+            } else {
+                window.location.href = href;
+            }
+        });
+    });
 });
+
 // EPISODE 
 document.querySelectorAll('.episode-thumbnail').forEach(thumbnail => {
     thumbnail.addEventListener('click', () => {
@@ -98,4 +130,3 @@ document.querySelectorAll('.episode-thumbnail').forEach(thumbnail => {
         }
     });
 });
-
