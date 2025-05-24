@@ -1,4 +1,4 @@
-
+/* ===== BASE STYLES ===== */
 body {
   margin: 0;
   padding: 0;
@@ -182,11 +182,19 @@ Buttons
   }
 
   .profile-name {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .profile-bio {
+    font-size: 0.8rem;
   }
 
   .profile-stats {
     justify-content: center;
+  }
+
+  .profile-stats div {
+    font-size: 0.7rem;
   }
 
   /* Override Bootstrap stacking for profile-section */
@@ -210,8 +218,8 @@ Buttons
   }
 
   .profile-picture {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
   }
 }
