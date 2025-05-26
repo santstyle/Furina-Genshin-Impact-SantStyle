@@ -1,7 +1,7 @@
 /* ===========================
 Base Styles and Variables
    =========================== */
-:root {
+   :root {
     --primary: #0088ff;
     --dark: #258bff;
     --light: #f5f6fa;
@@ -769,13 +769,6 @@ Responsive Styles
 
     .actions {
         flex-wrap: wrap;
-    }
-
-    .navbar-collapse {
-        background: rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        margin-top: 10px;
-        border-radius: 10px;
     }
 
     .search-box {
