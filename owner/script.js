@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // PAGE LOAD ANIMATION (fade in opacity from 0 to 1) using GSAP
+    // PAGE LOAD ANIMATION 
     if (typeof gsap !== 'undefined') {
         gsap.fromTo('body',
             { opacity: 0 },
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // PAGE TRANSITION ANIMATION ON NAVIGATION LINKS (fade out only) using GSAP
+    // PAGE TRANSITION ANIMATION ON NAVIGATION LINKS 
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
