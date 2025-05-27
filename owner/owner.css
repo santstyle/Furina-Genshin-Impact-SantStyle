@@ -137,14 +137,6 @@ Buttons
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Profile Section */
-.profile-section {
-  margin-top: 80px;
-  padding-top: 20px;
-  position: relative;
-  z-index: -1;
-}
-
 .profile-picture {
   width: 150px;
   height: 150px;
