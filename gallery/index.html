@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/asset/icon furina.png" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="gallery.css" />
+        <title>Furina - Gallery</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+        <div class="content-wrapper">
+                <!-- NAVIGATION -->
+                <nav class="navbar navbar-expand-lg">
+                        <div class="container">
+                                <a class="navbar-brand text-light" href="/index.html">
+                                        <i></i>Genshin Impact
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav">
+                                        <i class="fas fa-bars"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav me-auto">
+                                                <li class="nav-item">
+                                                        <a class="nav-link active" href="/gallery/index.html"><i></i>
+                                                                Gallery</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="/about/index.html"><i></i> About</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="/character/index.html"><i></i> Character</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="/owner/index.html"><i></i> Owner</a>
+                                                </li>
+                                        </ul>
+                                        <div class="d-flex">
+                                                <a href="https://www.instagram.com/santstyle.mv/?hl=id"
+                                                        class="btn btn-premium ms-3 text-light">Follow</a>
+                                        </div>
+                                </div>
+                        </div>
+                </nav>
+                <section class="container mt-4">
+                        <h3 class="text-light">Tambah Foto ke Gallery</h3>
+                        <form id="upload-form" class="row g-3 align-items-center" enctype="multipart/form-data">
+                                <div class="col-auto">
+                                        <label for="image-input" class="col-form-label">Pilih Gambar:</label>
+                                </div>
+                                <div class="col-auto">
+                                        <input type="file" id="image-input" accept="image/*" required
+                                                class="form-control" />
+                                </div>
+                                <div class="col-auto">
+                                        <label for="source-input" class="col-form-label">Sumber Gambar (URL):</label>
+                                </div>
+                                <div class="col-auto">
+                                        <input type="url" id="source-input" placeholder="https://example.com" required
+                                                class="form-control" />
+                                </div>
+                                <div class="col-auto">
+                                        <button type="submit"
+                                                class="btn btn-premium ms-3 text-light rounded-5">Upload</button>
+                                </div>
+                        </form>
+        
+                        <div id="upload-popup" class="upload-popup hidden">
+                                <span id="upload-popup-message"></span>
+                                <button id="upload-popup-close" aria-label="Close popup">&times;</button>
+                        </div>
+                </section>
+                <!-- Gallery Grid -->
+                <section class="gallery-grid container mt-5 pt-3" id="gallery-grid">
+                        <div class="row g-2" id="gallery-row">
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (1).jpeg" alt="Furina 1"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://in.pinterest.com/pin/1094726622035105847/"
+                                                class="source-button text-center " target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (2).jpeg" alt="Furina 2"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://in.pinterest.com/pin/1114781714014811228/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (3).jpeg" alt="Furina 3"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://id.pinterest.com/pin/13299761395650762/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (4).jpeg" alt="Furina 4"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://id.pinterest.com/pin/368521182026273748/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (5).jpeg" alt="Furina 5"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1782902911670116403/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (6).jpeg" alt="Furina 6"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://in.pinterest.com/pin/877287202416327498/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (7).jpeg" alt="Furina 7"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://id.pinterest.com/pin/2251868557319035/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (8).jpeg" alt="Furina 8"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1891739039042240854/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (9).jpeg" alt="Furina 9"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1811437798614053112/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (10).jpeg" alt="Furina 10"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1780082171530949082/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (11).jpeg" alt="Furina 11"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1792877145284645199/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (12).jpeg" alt="Furina 12"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://id.pinterest.com/pin/12103492742960417/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (13).jpeg" alt="Furina 13"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1809973063129477474/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (14).jpeg" alt="Furina 14"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1754334297337864331/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (15).jpeg" alt="Furina 15"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1812484198361674107"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (16).jpeg" alt="Furina 16"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://in.pinterest.com/pin/952652127430733603/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (17).jpeg" alt="Furina 17"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://uk.pinterest.com/pin/891220213772185622/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (18).jpeg" alt="Furina 18"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://id.pinterest.com/pin/63965257210354074/"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (19).jpeg" alt="Furina 19"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1918484507193414083/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (20).jpeg" alt="Furina 20"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1777127763474067684/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (21).jpeg" alt="Furina 21"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1765543417168462030/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (22).jpeg" alt="Furina 22"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1784589889893503051/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (23).jpeg" alt="Furina 23"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1760645664135135420/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (24).jpeg" alt="Furina 24"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1834426782642237562/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (25).jpeg" alt="Furina 25"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1717094569345736710/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (26).jpeg" alt="Furina 26"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1845117226153803792/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (27).jpeg" alt="Furina 27"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1825159973288165594/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (28).jpeg" alt="Furina 28"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1775036821711602141/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (29).jpeg" alt="Furina 29"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1721717525535412574/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (30).jpeg" alt="Furina 30"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1853686912223265212/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (31).jpeg" alt="Furina 31"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1679043100034093056/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (32).jpeg" alt="Furina 32"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1904737573395980621/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (33).jpeg" alt="Furina 33"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1770391981690073580/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (34).jpeg" alt="Furina 34"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1849018398283649438/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (35).jpeg" alt="Furina 35"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1844036352561840551/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <img src="/asset/gallery/furina (36).jpeg" alt="Furina 36"
+                                                class="gallery-item img-fluid" />
+                                        <a href="https://x.com/S2_Datsha/status/1868606236247392320/photo/1"
+                                                class="source-button text-center" target="_blank"
+                                                rel="noopener noreferrer">Lihat
+                                                Sumber</a>
+                                </div>
+                        </div>
+                </section>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="gallery.js"></script>
+</body>
+
+</html>
