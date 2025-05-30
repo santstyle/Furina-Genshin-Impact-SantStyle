@@ -1,6 +1,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const contentSections = document.querySelectorAll('#furina-character > *');
+    const contentSections = document.querySelectorAll('.content-section');
+    let currentIndex = 0;
+
+    // Hide all sections except the first
+    contentSections.forEach((section, index) => {
+        if (index !== 0) {
+            section.style.display = 'none';
+        }
+    });
+
+    // Add event listeners to Next buttons
+    const nextButtons = document.querySelectorAll('.next-btn');
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            contentSections[currentIndex].style.display = 'none';
+            currentIndex++;
+            if (currentIndex < contentSections.length) {
+                contentSections[currentIndex].style.display = 'block';
+                contentSections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 
     // Initialize styles for animation
     contentSections.forEach(section => {
