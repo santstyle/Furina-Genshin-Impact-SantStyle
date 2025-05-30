@@ -306,8 +306,8 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.fromTo(circle,
             { scale: 0, opacity: 1 },
             { scale: 4, opacity: 0, duration: 0.6, ease: "power2.out" }
+            
         );
     }
 
-    ScrollTrigger.refresh();
-
+    ScrollTrigger.refresh();})
