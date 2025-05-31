@@ -2,35 +2,42 @@
 document.addEventListener('DOMContentLoaded', () => {
     const contentSections = document.querySelectorAll('.content-section');
     let currentIndex = 0;
-
-    // Hide all sections except the first
     contentSections.forEach((section, index) => {
         if (index !== 0) {
             section.style.display = 'none';
         }
     });
 
-    // Add event listeners to Next buttons
     const nextButtons = document.querySelectorAll('.next-btn');
     nextButtons.forEach(button => {
         button.addEventListener('click', () => {
-            contentSections[currentIndex].style.display = 'none';
-            currentIndex++;
-            if (currentIndex < contentSections.length) {
+            if (currentIndex < contentSections.length - 1) {
+                contentSections[currentIndex].style.display = 'none';
+                currentIndex++;
                 contentSections[currentIndex].style.display = 'block';
                 contentSections[currentIndex].scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // Initialize styles for animation
+    const prevButtons = document.querySelectorAll('.prev-btn');
+    prevButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                contentSections[currentIndex].style.display = 'none';
+                currentIndex--;
+                contentSections[currentIndex].style.display = 'block';
+                contentSections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
     contentSections.forEach(section => {
         section.style.opacity = 0;
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     });
 
-    // Sequential fade-in on page load
     contentSections.forEach((section, index) => {
         setTimeout(() => {
             section.style.opacity = 1;
@@ -38,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, index * 300);
     });
 
-    // Intersection Observer for scroll reveal
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -61,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Smooth scrolling
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', e => {
