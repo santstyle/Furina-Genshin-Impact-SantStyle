@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const uploadForm = document.getElementById('upload-form');
     const uploadPopup = document.getElementById('upload-popup');
@@ -32,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo('body', 
         { opacity: 0 }, 
         { opacity: 1, duration: 0.8, ease: "power1.out" }
+    );
+
+    gsap.fromTo('.gallery-item', 
+        { opacity: 0, scale: 0.8 }, 
+        { opacity: 1, scale: 1, duration: 1, ease: "power2.out", stagger: 0.1 }
     );
 
     // PAGE TRANSITION ANIMATION ON NAVIGATION LINKS
